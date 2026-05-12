@@ -72,14 +72,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Arialflow" },
+      { name: "description", content: "Aria Flow Design is a web application for creating and managing complex workflows and business processes." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Arialflow" },
+      { property: "og:description", content: "Aria Flow Design is a web application for creating and managing complex workflows and business processes." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Arialflow" },
+      { name: "twitter:description", content: "Aria Flow Design is a web application for creating and managing complex workflows and business processes." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/89fc0d85-4deb-483d-bdc0-444481faf545/id-preview-6bd54fac--8d05d933-78f4-4f94-be82-490e86e6051f.lovable.app-1778542221693.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/89fc0d85-4deb-483d-bdc0-444481faf545/id-preview-6bd54fac--8d05d933-78f4-4f94-be82-490e86e6051f.lovable.app-1778542221693.png" },
     ],
     links: [
       {
