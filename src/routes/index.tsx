@@ -292,8 +292,8 @@ function HomePage() {
               <Link to="/contact" className="inline-flex h-12 items-center gap-2 rounded-full bg-primary px-6 text-sm font-medium text-primary-foreground ring-ember">
                 Claim your free audit <ArrowRight className="h-4 w-4" />
               </Link>
-              <a href="mailto:contact@arialflow.com" className="inline-flex h-12 items-center gap-2 rounded-full border border-border/80 px-6 text-sm">
-                Email us instead
+              <a href="https://wa.me/+13072784862" target="_blank" rel="noreferrer" className="inline-flex h-12 items-center gap-2 rounded-full border border-border/80 px-6 text-sm hover:bg-surface">
+                Chat on WhatsApp
               </a>
             </div>
           </div>

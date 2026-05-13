@@ -99,10 +99,43 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 });
 
 function RootShell({ children }: { children: React.ReactNode }) {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Arialflow",
+    "image": "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/89fc0d85-4deb-483d-bdc0-444481faf545/id-preview-6bd54fac--8d05d933-78f4-4f94-be82-490e86e6051f.lovable.app-1778542221693.png",
+    "url": "https://www.arialflow.com/",
+    "telephone": "+1-800-000-0000",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Growth Ave",
+      "addressLocality": "Dallas",
+      "addressRegion": "TX",
+      "postalCode": "75201",
+      "addressCountry": "US"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
+    ]
+  };
+
   return (
     <html lang="en">
       <head>
         <HeadContent />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       </head>
       <body>
         {children}

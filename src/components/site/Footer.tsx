@@ -43,8 +43,17 @@ export function Footer() {
           </ul>
         </div>
         <div>
+          <p className="font-display text-base font-semibold text-espresso-foreground">Service Areas</p>
+          <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
+            <li><Link to="/locations/$slug" params={{ slug: "dallas-tx" }} className="hover:text-espresso-foreground">Dallas, TX</Link></li>
+            <li><Link to="/locations/$slug" params={{ slug: "tampa-fl" }} className="hover:text-espresso-foreground">Tampa, FL</Link></li>
+            <li><Link to="/locations/$slug" params={{ slug: "houston-tx" }} className="hover:text-espresso-foreground">Houston, TX</Link></li>
+          </ul>
+        </div>
+        <div>
           <p className="font-display text-base font-semibold text-espresso-foreground">Contact Us</p>
           <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
+            <li><span className="block text-espresso-foreground">WhatsApp</span><a href="https://wa.me/+13072784862" className="hover:text-espresso-foreground" target="_blank" rel="noreferrer">+1 (307) 278-4862</a></li>
             <li><span className="block text-espresso-foreground">Email</span>contact@arialflow.com</li>
             <li><span className="block text-espresso-foreground">Hours</span>Mon–Fri · 8am–7pm CT</li>
             <li><span className="block text-espresso-foreground">Regions</span>USA · UK · Canada · AU</li>

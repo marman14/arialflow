@@ -11,6 +11,7 @@ export type Service = {
   features: { title: string; desc: string }[];
   faq: { q: string; a: string }[];
   stat: { k: string; v: string };
+  caseStudies: { company: string; metric: string; unit: string; description: string; }[];
 };
 
 export const SERVICES: Service[] = [
@@ -33,6 +34,10 @@ export const SERVICES: Service[] = [
       { q: "What about emergency calls?", a: "Emergencies are flagged and routed to your on-call tech immediately, day or night." },
     ],
     stat: { k: "100%", v: "Pickup rate" },
+    caseStudies: [
+      { company: "Dallas HVAC Pro", metric: "41", unit: "Appointments booked", description: "AI captured after-hours emergency calls, leading to 41 booked appointments that would have otherwise gone to voicemail and competitors." },
+      { company: "Tampa Bay Plumbing", metric: "$12k", unit: "Revenue saved", description: "By answering within 1 ring, the AI retained customers who would hang up after 3 rings, recovering an estimated $12k in one month." }
+    ]
   },
   {
     slug: "ai-chatbot",
@@ -53,6 +58,9 @@ export const SERVICES: Service[] = [
       { q: "Can my office team take over?", a: "One click in the inbox to jump in mid-conversation." },
     ],
     stat: { k: "<5s", v: "First response" },
+    caseStudies: [
+      { company: "Houston Roofing Experts", metric: "134", unit: "Qualified leads", description: "The chatbot qualified incoming traffic from Facebook ads instantly, converting 134 leads in the first 30 days." },
+    ]
   },
   {
     slug: "review-engine",
@@ -73,6 +81,9 @@ export const SERVICES: Service[] = [
       { q: "What if a customer leaves a 1-star?", a: "You're notified instantly and we draft a calm, professional public response." },
     ],
     stat: { k: "+40", v: "Reviews / month" },
+    caseStudies: [
+      { company: "Orlando AC & Cooling", metric: "61", unit: "New 5★ reviews", description: "Went from 14 to 75 Google reviews in a month using automated SMS triggers after job completion." },
+    ]
   },
   {
     slug: "lead-follow-up",
@@ -93,6 +104,9 @@ export const SERVICES: Service[] = [
       { q: "Do you write the messages?", a: "Yes — we draft, you approve, we ship." },
     ],
     stat: { k: "30–50%", v: "More bookings" },
+    caseStudies: [
+      { company: "Delgado Plumbing", metric: "+58%", unit: "Repeat bookings", description: "Automated maintenance follow-ups reactivated dormant customers, increasing repeat bookings by 58%." },
+    ]
   },
   {
     slug: "local-seo-social",
@@ -112,6 +126,9 @@ export const SERVICES: Service[] = [
       { q: "How fast will I rank?", a: "Map pack movement in 30–60 days; competitive cities take 3–6 months for sustained #1." },
     ],
     stat: { k: "Top 3", v: "Map pack target" },
+    caseStudies: [
+      { company: "Whitman Roofing", metric: "#1", unit: "Map Pack Ranking", description: "Dominated the local map pack in Phoenix within 4 months, driving an extra 85 inbound calls per month." },
+    ]
   },
   {
     slug: "conversion-website",
@@ -131,6 +148,9 @@ export const SERVICES: Service[] = [
       { q: "What if I already have a site?", a: "We migrate your content and 301 your old URLs so you don't lose any SEO juice." },
     ],
     stat: { k: "5–7", v: "Days to launch" },
+    caseStudies: [
+      { company: "Barlow Heating", metric: "2.4x", unit: "Conversion rate", description: "Replacing their old site with our conversion-optimized template increased lead capture rate by 140%." },
+    ]
   },
   {
     slug: "paid-ads",
@@ -150,6 +170,9 @@ export const SERVICES: Service[] = [
       { q: "How much should I spend?", a: "Start at $1.5k–$3k/month ad spend in most metros. We scale only when ROAS proves out." },
     ],
     stat: { k: "8–12×", v: "Avg ROAS" },
+    caseStudies: [
+      { company: "Brooks Solar", metric: "11x", unit: "ROAS", description: "Google Ads ROAS jumped from 3x to 11x in the second month by targeting high-intent service keywords." },
+    ]
   },
   {
     slug: "service-area-domination",
@@ -169,6 +192,9 @@ export const SERVICES: Service[] = [
       { q: "How long until I dominate?", a: "Realistic timeline: 6–12 months to own most service areas in a mid-size metro." },
     ],
     stat: { k: "12+", v: "Cities targeted" },
+    caseStudies: [
+      { company: "Pickens AC & Heat", metric: "14", unit: "Cities Dominated", description: "Deployed 14 localized city pages that organically rank in the top 3, capturing metro-wide search volume." },
+    ]
   },
 ];
 

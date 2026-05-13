@@ -33,8 +33,7 @@ function ContactPage() {
           <aside className="md:col-span-4 space-y-4">
             {[
               { icon: Mail, label: "Email", value: "contact@arialflow.com" },
-              { icon: Phone, label: "Phone", value: "+1 (555) 010-0420" },
-              { icon: MessageSquare, label: "WhatsApp", value: "Reply within 1 hour" },
+              { icon: MessageSquare, label: "WhatsApp", value: "+1 (307) 278-4862", link: "https://wa.me/+13072784862" },
             ].map((c) => (
               <div key={c.label} className="flex items-start gap-4 rounded-2xl border border-border/60 bg-surface p-5">
                 <div className="grid h-10 w-10 place-items-center rounded-lg bg-primary/15 text-primary">
@@ -42,7 +41,11 @@ function ContactPage() {
                 </div>
                 <div>
                   <p className="text-xs uppercase tracking-widest text-muted-foreground">{c.label}</p>
-                  <p className="mt-1 text-sm">{c.value}</p>
+                  {c.link ? (
+                    <a href={c.link} target="_blank" rel="noreferrer" className="mt-1 text-sm hover:text-primary transition-colors">{c.value}</a>
+                  ) : (
+                    <p className="mt-1 text-sm">{c.value}</p>
+                  )}
                 </div>
               </div>
             ))}
