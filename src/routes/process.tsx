@@ -6,9 +6,9 @@ export const Route = createFileRoute("/process")({
   head: () => ({
     meta: [
       { title: "How It Works — Arialflow Onboarding in 14 Days" },
-      { name: "description", content: "Audit, build, pilot, decide. Our four-step process gets your AI growth system live in under two weeks — risk free for 30 days." },
+      { name: "description", content: "Audit, build, launch, optimize. Our four-step process gets your AI growth system live in under two weeks — month-to-month, no contracts." },
       { property: "og:title", content: "How Arialflow Works" },
-      { property: "og:description", content: "Live in 14 days. Free for 30. Cancel any time." },
+      { property: "og:description", content: "Live in 14 days. Month-to-month. Cancel any time." },
     ],
   }),
   component: ProcessPage,
@@ -17,8 +17,8 @@ export const Route = createFileRoute("/process")({
 const steps = [
   { icon: Calendar, n: "01", title: "Free 30-min audit", time: "Day 0", desc: "We dig into your call logs, missed calls, lead sources and review velocity. You leave with a written report — even if you don't sign up." },
   { icon: Cog, n: "02", title: "We build your stack", time: "Days 1–10", desc: "Calling agent voice trained on your business, chatbot scripts, review SMS sequences, and your free conversion-optimized website." },
-  { icon: Rocket, n: "03", title: "30-day live pilot", time: "Days 11–40", desc: "The system goes live. You watch booked jobs appear in your calendar and reviews land on Google — at zero cost." },
-  { icon: ShieldCheck, n: "04", title: "Keep it or walk", time: "Day 40+", desc: "Continue on a transparent month-to-month plan. No contracts, no setup fees, no surprises. Cancel any time." },
+  { icon: Rocket, n: "03", title: "Launch & optimize", time: "Days 11–30", desc: "The system goes live. We monitor every call, chat and review — tuning scripts and sequences daily for the first 30 days." },
+  { icon: ShieldCheck, n: "04", title: "Month-to-month forever", time: "Day 30+", desc: "Continue on a transparent month-to-month plan. No contracts, no setup fees, no surprises. Cancel any time." },
 ];
 
 function ProcessPage() {

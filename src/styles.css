@@ -34,6 +34,8 @@
   --color-surface-elevated: var(--surface-elevated);
   --color-ember: var(--ember);
   --color-ember-glow: var(--ember-glow);
+  --color-espresso: var(--espresso);
+  --color-espresso-foreground: var(--espresso-foreground);
   --font-display: "Fraunces", Georgia, serif;
   --font-sans: "Inter", system-ui, sans-serif;
 }
@@ -41,35 +43,39 @@
 :root {
   --radius: 0.875rem;
 
-  /* Warm dark "field at dusk" palette */
-  --background: oklch(0.16 0.012 60);
-  --foreground: oklch(0.97 0.01 80);
+  /* Warm cream "linen at dawn" palette — matches reference */
+  --background: oklch(0.955 0.012 75);
+  --foreground: oklch(0.18 0.012 50);
 
-  --surface: oklch(0.20 0.014 55);
-  --surface-elevated: oklch(0.235 0.018 50);
+  --surface: oklch(0.985 0.008 80);
+  --surface-elevated: oklch(1 0 0);
 
-  --card: oklch(0.20 0.014 55);
-  --card-foreground: oklch(0.97 0.01 80);
-  --popover: oklch(0.20 0.014 55);
-  --popover-foreground: oklch(0.97 0.01 80);
+  --card: oklch(0.985 0.008 80);
+  --card-foreground: oklch(0.18 0.012 50);
+  --popover: oklch(0.985 0.008 80);
+  --popover-foreground: oklch(0.18 0.012 50);
+
+  /* Dark espresso brown — used for footer / dark sections */
+  --espresso: oklch(0.20 0.014 50);
+  --espresso-foreground: oklch(0.96 0.012 80);
 
   /* Ember orange */
-  --primary: oklch(0.72 0.17 45);
-  --primary-foreground: oklch(0.16 0.012 60);
-  --ember: oklch(0.72 0.17 45);
-  --ember-glow: oklch(0.82 0.16 65);
+  --primary: oklch(0.66 0.16 42);
+  --primary-foreground: oklch(0.99 0.005 80);
+  --ember: oklch(0.66 0.16 42);
+  --ember-glow: oklch(0.78 0.15 60);
 
-  --secondary: oklch(0.26 0.02 55);
-  --secondary-foreground: oklch(0.97 0.01 80);
-  --muted: oklch(0.24 0.015 55);
-  --muted-foreground: oklch(0.72 0.018 70);
-  --accent: oklch(0.30 0.04 50);
-  --accent-foreground: oklch(0.97 0.01 80);
-  --destructive: oklch(0.62 0.22 27);
+  --secondary: oklch(0.92 0.012 75);
+  --secondary-foreground: oklch(0.18 0.012 50);
+  --muted: oklch(0.93 0.010 75);
+  --muted-foreground: oklch(0.42 0.014 55);
+  --accent: oklch(0.90 0.020 60);
+  --accent-foreground: oklch(0.18 0.012 50);
+  --destructive: oklch(0.58 0.22 27);
   --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.30 0.02 55 / 60%);
-  --input: oklch(0.30 0.02 55);
-  --ring: oklch(0.72 0.17 45);
+  --border: oklch(0.18 0.012 50 / 12%);
+  --input: oklch(0.18 0.012 50 / 18%);
+  --ring: oklch(0.66 0.16 42);
 }
 
 .dark { color-scheme: dark; }
@@ -94,19 +100,22 @@
   }
   .bg-grid {
     background-image:
-      linear-gradient(to right, oklch(1 0 0 / 0.04) 1px, transparent 1px),
-      linear-gradient(to bottom, oklch(1 0 0 / 0.04) 1px, transparent 1px);
+      linear-gradient(to right, oklch(0.18 0.012 50 / 0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, oklch(0.18 0.012 50 / 0.06) 1px, transparent 1px);
     background-size: 56px 56px;
   }
   .bg-radial-ember {
-    background: radial-gradient(60% 50% at 50% 0%, oklch(0.72 0.17 45 / 0.25), transparent 70%);
+    background: radial-gradient(60% 50% at 50% 0%, oklch(0.66 0.16 42 / 0.18), transparent 70%);
   }
-  .ring-ember { box-shadow: 0 0 0 1px oklch(0.72 0.17 45 / 0.4), 0 20px 60px -20px oklch(0.72 0.17 45 / 0.45); }
+  .ring-ember { box-shadow: 0 0 0 1px oklch(0.66 0.16 42 / 0.35), 0 20px 60px -20px oklch(0.66 0.16 42 / 0.45); }
   .glass {
-    background: linear-gradient(180deg, oklch(1 0 0 / 0.04), oklch(1 0 0 / 0.01));
+    background: linear-gradient(180deg, oklch(1 0 0 / 0.85), oklch(1 0 0 / 0.6));
     backdrop-filter: blur(10px);
-    border: 1px solid oklch(1 0 0 / 0.06);
+    border: 1px solid oklch(0.18 0.012 50 / 0.08);
+    box-shadow: 0 10px 40px -20px oklch(0.18 0.012 50 / 0.25);
   }
+  .bg-espresso { background-color: var(--espresso); color: var(--espresso-foreground); }
+  .bg-espresso .text-muted-foreground { color: oklch(0.72 0.014 70); }
 }
 
 @font-face { font-family: "Inter"; font-style: normal; font-weight: 100 900; font-display: swap;

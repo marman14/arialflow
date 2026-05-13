@@ -6,7 +6,7 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About — Arialflow, the AI growth partner for contractors" },
-      { name: "description", content: "Founder-led. Trade-specialized. Direct access, transparent pricing, and a 30-day risk-free pilot — that's how Arialflow does business." },
+      { name: "description", content: "Founder-led. Trade-specialized. Direct access, transparent pricing, and month-to-month plans — that's how Arialflow does business." },
       { property: "og:title", content: "About Arialflow" },
       { property: "og:description", content: "Founder-led. Trade-specialized. Built for the field." },
     ],
@@ -45,7 +45,7 @@ function AboutPage() {
               <p className="font-display text-3xl">Arman</p>
               <p className="text-sm text-muted-foreground">Founder · Arialflow</p>
               <blockquote className="mt-5 border-l-2 border-primary pl-4 text-sm italic text-muted-foreground">
-                "I don't sell software. I sell booked jobs. If we can't move that number for you in 30 days, you don't pay."
+                "I don't sell software. I sell booked jobs. If we can't move that number for you, we'll tell you straight — and you walk away owing nothing."
               </blockquote>
             </div>
           </aside>

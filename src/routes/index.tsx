@@ -30,8 +30,8 @@ const services = [
 const steps = [
   { n: "01", title: "Free 30-min audit", desc: "We map the leaks in your current funnel — missed calls, slow follow-up, lost reviews." },
   { n: "02", title: "We build it for you", desc: "Calling agent, chatbot, review engine, and follow-up sequences configured to your business." },
-  { n: "03", title: "30-day live pilot", desc: "Run the full system at zero cost. Watch booked jobs roll in from sources you used to miss." },
-  { n: "04", title: "Keep it or walk away", desc: "Continue on a simple month-to-month plan, or stop. Zero pressure, zero contracts." },
+  { n: "03", title: "Go live in 14 days", desc: "Your full growth stack ships in under two weeks. Booked jobs start landing in your calendar." },
+  { n: "04", title: "Month-to-month, always", desc: "Simple monthly plan, no long contracts. Scale up or down whenever you want." },
 ];
 
 const cases = [
@@ -45,6 +45,12 @@ const reviews = [
   { name: "Mike Harrington", co: "Harrington HVAC · Dallas, TX", body: "We were losing 3–4 calls a day to voicemail. Now the AI picks up, books the appointment, we just show up. Worth every penny." },
   { name: "Jason Reedley", co: "Reedley Roofing · Houston, TX", body: "Review automation paid for itself in week one. We went from 14 Google reviews to 67 in a month. Phone hasn't stopped ringing." },
   { name: "Steve Kowalski", co: "Kowalski Heating & Air · Orlando, FL", body: "Three months in, we've added over $40K in new revenue. The follow-up system alone recovered customers I thought were gone." },
+  { name: "Maria Delgado", co: "Delgado Plumbing · San Antonio, TX", body: "Bilingual AI agent was a game changer for our market. We're booking 22 extra jobs a month from Spanish-speaking callers we used to lose." },
+  { name: "Chris O'Donnell", co: "O'Donnell Electric · Tampa, FL", body: "I sleep at night now. Calls don't go to voicemail, leads don't go cold, reviews land themselves. Best operations decision I've made in 12 years." },
+  { name: "Rachel Whitman", co: "Whitman Roofing · Phoenix, AZ", body: "The chatbot books storm-damage inspections at midnight. Our crews have a full pipeline before the office even opens. Unreal." },
+  { name: "Daryl Pickens", co: "Pickens AC & Heat · Atlanta, GA", body: "Arman doesn't disappear after onboarding. He's on WhatsApp, makes tweaks the same day. That's not normal in this industry." },
+  { name: "Lauren Brooks", co: "Brooks Solar · Denver, CO", body: "ROAS on Google ads jumped from 3× to 11× in the second month. They actually understand our trade — that's the difference." },
+  { name: "Tom Barlow", co: "Barlow Heating · Manchester, UK", body: "We moved from a UK-based agency to Arialflow. Better systems, lower price, and they pick up the phone. Couldn't recommend more." },
 ];
 
 function HomePage() {
@@ -76,10 +82,10 @@ function HomePage() {
                 See how it works
               </Link>
             </div>
-            <dl className="mt-12 grid max-w-lg grid-cols-3 gap-6 border-t border-border/60 pt-8">
+            <dl className="mt-12 grid max-w-lg grid-cols-3 gap-6 border-t border-border pt-8">
               {[
                 { k: "4.9★", v: "Avg client rating" },
-                { k: "30 days", v: "Free pilot" },
+                { k: "80+", v: "Active contractors" },
                 { k: "<5s", v: "Lead response" },
               ].map((s) => (
                 <div key={s.v}>
@@ -234,10 +240,10 @@ function HomePage() {
         </div>
         <div className="mt-12 grid gap-4 md:grid-cols-3">
           {reviews.map((r) => (
-            <figure key={r.name} className="flex h-full flex-col rounded-2xl border border-border/60 bg-surface p-6">
+            <figure key={r.name} className="flex h-full flex-col rounded-2xl border border-border bg-surface p-6">
               <Quote className="h-6 w-6 text-primary" />
               <blockquote className="mt-4 text-sm leading-relaxed text-foreground">"{r.body}"</blockquote>
-              <figcaption className="mt-6 border-t border-border/60 pt-4">
+              <figcaption className="mt-6 border-t border-border pt-4">
                 <p className="text-sm font-medium">{r.name}</p>
                 <p className="text-xs text-muted-foreground">{r.co}</p>
               </figcaption>
@@ -258,12 +264,12 @@ function HomePage() {
           </div>
           <ul className="grid gap-4">
             {[
-              { i: ShieldCheck, t: "30-day risk-free pilot", d: "Use the full system for a month. Cancel any time." },
+              { i: ShieldCheck, t: "Month-to-month, always", d: "Simple flat monthly pricing. No setup fees, no long contracts. Cancel any time." },
               { i: Clock, t: "Live in under 14 days", d: "Calling agent, chatbot, reviews and follow-ups configured for your business." },
               { i: Check, t: "Built for the trades", d: "Specialized for HVAC, roofing, plumbing, electrical, and solar." },
               { i: TrendingUp, t: "Founder-led, transparent", d: "Direct line to Arman. No anonymous support tickets." },
             ].map(({ i: Icon, t, d }) => (
-              <li key={t} className="flex gap-4 rounded-2xl border border-border/60 bg-surface p-5">
+              <li key={t} className="flex gap-4 rounded-2xl border border-border bg-surface p-5">
                 <div className="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-primary/15 text-primary"><Icon className="h-5 w-5" /></div>
                 <div>
                   <p className="font-medium">{t}</p>
