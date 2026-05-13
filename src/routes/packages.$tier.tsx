@@ -42,7 +42,7 @@ export const Route = createFileRoute("/packages/$tier")({
 });
 
 function PackagePage() {
-  const { pack } = Route.useLoaderData();
+  const { pack } = Route.useLoaderData() as { pack: typeof PACKAGES[number] };
   const isFlagship = pack.slug === "done-for-you";
 
   // Map packages to which services they include for the visual grid
