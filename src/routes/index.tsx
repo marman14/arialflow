@@ -1,22 +1,25 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/Layout";
+import { ReviewsMarquee } from "@/components/site/ReviewsMarquee";
 import heroImg from "@/assets/hero-contractor.jpg";
 import {
   PhoneCall, MessageSquare, Star, Repeat, Globe, Megaphone,
-  ArrowRight, Check, Quote, TrendingUp, Clock, ShieldCheck,
+  ArrowRight, Check, TrendingUp, Clock, ShieldCheck, Calendar,
 } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Arialflow — More calls. More jobs. More revenue, on autopilot." },
-      { name: "description", content: "AI growth systems for HVAC, roofing & plumbing contractors. Capture every call, follow up every lead, win 5-star reviews — without leaving the job site." },
+      { name: "description", content: "AI growth systems for HVAC, roofing & plumbing contractors in Texas & Florida. Capture every call, follow up every lead, win 5-star reviews — without leaving the job site." },
       { property: "og:title", content: "Arialflow — AI Growth for Contractors" },
       { property: "og:description", content: "Capture every call, follow up every lead, win 5-star reviews — without leaving the job site." },
     ],
   }),
   component: HomePage,
 });
+
+const CALENDLY = "https://calendly.com/arwebcrafts/30-mint";
 
 const services = [
   { icon: PhoneCall, title: "AI Calling Agent", desc: "Answers, qualifies, and books every inbound call 24/7 — even at 2am.", stat: "100% pickup rate" },
@@ -28,7 +31,7 @@ const services = [
 ];
 
 const steps = [
-  { n: "01", title: "Free 30-min audit", desc: "We map the leaks in your current funnel — missed calls, slow follow-up, lost reviews." },
+  { n: "01", title: "Book a free call", desc: "30 minutes. We map the leaks in your current funnel — missed calls, slow follow-up, lost reviews." },
   { n: "02", title: "We build it for you", desc: "Calling agent, chatbot, review engine, and follow-up sequences configured to your business." },
   { n: "03", title: "Go live in 14 days", desc: "Your full growth stack ships in under two weeks. Booked jobs start landing in your calendar." },
   { n: "04", title: "Month-to-month, always", desc: "Simple monthly plan, no long contracts. Scale up or down whenever you want." },
@@ -39,18 +42,6 @@ const cases = [
   { who: "Tampa Bay Roofing", city: "Tampa, FL", metric: "134", unit: "qualified leads", note: "first month with AI chatbot live." },
   { who: "Houston Plumbing Experts", city: "Houston, TX", metric: "+58%", unit: "repeat bookings", note: "from automated maintenance follow-ups." },
   { who: "Orlando AC & Cooling", city: "Orlando, FL", metric: "41", unit: "appointments", note: "booked by AI while crews were on site." },
-];
-
-const reviews = [
-  { name: "Mike Harrington", co: "Harrington HVAC · Dallas, TX", body: "We were losing 3–4 calls a day to voicemail. Now the AI picks up, books the appointment, we just show up. Worth every penny." },
-  { name: "Jason Reedley", co: "Reedley Roofing · Houston, TX", body: "Review automation paid for itself in week one. We went from 14 Google reviews to 67 in a month. Phone hasn't stopped ringing." },
-  { name: "Steve Kowalski", co: "Kowalski Heating & Air · Orlando, FL", body: "Three months in, we've added over $40K in new revenue. The follow-up system alone recovered customers I thought were gone." },
-  { name: "Maria Delgado", co: "Delgado Plumbing · San Antonio, TX", body: "Bilingual AI agent was a game changer for our market. We're booking 22 extra jobs a month from Spanish-speaking callers we used to lose." },
-  { name: "Chris O'Donnell", co: "O'Donnell Electric · Tampa, FL", body: "I sleep at night now. Calls don't go to voicemail, leads don't go cold, reviews land themselves. Best operations decision I've made in 12 years." },
-  { name: "Rachel Whitman", co: "Whitman Roofing · Phoenix, AZ", body: "The chatbot books storm-damage inspections at midnight. Our crews have a full pipeline before the office even opens. Unreal." },
-  { name: "Daryl Pickens", co: "Pickens AC & Heat · Atlanta, GA", body: "Arman doesn't disappear after onboarding. He's on WhatsApp, makes tweaks the same day. That's not normal in this industry." },
-  { name: "Lauren Brooks", co: "Brooks Solar · Denver, CO", body: "ROAS on Google ads jumped from 3× to 11× in the second month. They actually understand our trade — that's the difference." },
-  { name: "Tom Barlow", co: "Barlow Heating · Manchester, UK", body: "We moved from a UK-based agency to Arialflow. Better systems, lower price, and they pick up the phone. Couldn't recommend more." },
 ];
 
 function HomePage() {
@@ -64,7 +55,7 @@ function HomePage() {
           <div className="md:col-span-7">
             <div className="inline-flex items-center gap-2 rounded-full border border-border/60 bg-surface/60 px-3 py-1 text-xs text-muted-foreground">
               <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-primary" />
-              Trusted by 80+ contractors across the US, UK & AU
+              Trusted by 80+ contractors across Texas & Florida
             </div>
             <h1 className="mt-6 text-5xl leading-[1.02] md:text-7xl">
               More calls. More jobs.<br />
@@ -74,12 +65,12 @@ function HomePage() {
               Arialflow plugs the leaks in your contractor business — missed calls, slow follow-up, lost reviews — with a single AI growth system. You stay on the job site. We bring the work.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-3">
-              <Link to="/contact" className="group inline-flex h-12 items-center gap-2 rounded-full bg-primary px-6 text-sm font-medium text-primary-foreground ring-ember transition-transform hover:-translate-y-0.5">
-                Request your free audit
+              <a href={CALENDLY} target="_blank" rel="noreferrer" className="group inline-flex h-12 items-center gap-2 rounded-full bg-primary px-6 text-sm font-medium text-primary-foreground ring-ember transition-transform hover:-translate-y-0.5">
+                <Calendar className="h-4 w-4" /> Book your free consultation
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-              </Link>
-              <Link to="/process" className="inline-flex h-12 items-center gap-2 rounded-full border border-border/80 px-6 text-sm font-medium text-foreground hover:bg-surface">
-                See how it works
+              </a>
+              <Link to="/services" className="inline-flex h-12 items-center gap-2 rounded-full border border-border/80 px-6 text-sm font-medium text-foreground hover:bg-surface">
+                See our services
               </Link>
             </div>
             <dl className="mt-12 grid max-w-lg grid-cols-3 gap-6 border-t border-border pt-8">
@@ -137,6 +128,9 @@ function HomePage() {
             <p className="mt-5 text-muted-foreground">
               The average contractor misses 38% of inbound calls during peak hours. Of those leads, 80% never call back — they call the next name on Google. That's not a marketing problem. That's a response problem.
             </p>
+            <a href={CALENDLY} target="_blank" rel="noreferrer" className="mt-6 inline-flex h-11 items-center gap-2 rounded-full bg-primary px-5 text-sm font-medium text-primary-foreground">
+              <Calendar className="h-4 w-4" /> Get your free audit <ArrowRight className="h-4 w-4" />
+            </a>
           </div>
           <div className="grid grid-cols-2 gap-3">
             {[
@@ -184,16 +178,29 @@ function HomePage() {
         </div>
       </section>
 
+      {/* Mid-page CTA banner */}
+      <section className="border-t border-primary/20 bg-gradient-to-r from-primary/10 via-surface to-primary/5">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-5 py-10 md:flex-row md:px-8">
+          <div>
+            <h3 className="text-2xl font-semibold md:text-3xl">Ready to see how it works for your business?</h3>
+            <p className="mt-1 text-sm text-muted-foreground">Free 30-minute strategy call. No commitment.</p>
+          </div>
+          <a href={CALENDLY} target="_blank" rel="noreferrer" className="inline-flex h-12 shrink-0 items-center gap-2 rounded-full bg-primary px-6 text-sm font-medium text-primary-foreground transition-transform hover:-translate-y-0.5">
+            <Calendar className="h-4 w-4" /> Book your free call <ArrowRight className="h-4 w-4" />
+          </a>
+        </div>
+      </section>
+
       {/* Process */}
       <section className="mx-auto max-w-7xl px-5 py-24 md:px-8">
         <div className="grid gap-10 md:grid-cols-12">
           <div className="md:col-span-4">
             <p className="text-xs uppercase tracking-widest text-primary">How it works</p>
-            <h2 className="mt-3 text-4xl md:text-5xl">From audit to autopilot in under 14 days.</h2>
+            <h2 className="mt-3 text-4xl md:text-5xl">From call to autopilot in under 14 days.</h2>
             <p className="mt-5 text-muted-foreground">No big agency runaround. You talk to the founder, we build, you watch leads come in.</p>
-            <Link to="/contact" className="mt-8 inline-flex h-11 items-center gap-2 rounded-full bg-primary px-5 text-sm font-medium text-primary-foreground">
-              Start your free audit <ArrowRight className="h-4 w-4" />
-            </Link>
+            <a href={CALENDLY} target="_blank" rel="noreferrer" className="mt-8 inline-flex h-11 items-center gap-2 rounded-full bg-primary px-5 text-sm font-medium text-primary-foreground">
+              <Calendar className="h-4 w-4" /> Book your free call <ArrowRight className="h-4 w-4" />
+            </a>
           </div>
           <ol className="grid gap-3 md:col-span-8 md:grid-cols-2">
             {steps.map((s) => (
@@ -226,31 +233,8 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="mx-auto max-w-7xl px-5 py-24 md:px-8">
-        <div className="flex flex-wrap items-end justify-between gap-6">
-          <div className="max-w-xl">
-            <p className="text-xs uppercase tracking-widest text-primary">What contractors say</p>
-            <h2 className="mt-3 text-4xl md:text-5xl">5.0 from owners who stopped chasing leads.</h2>
-          </div>
-          <div className="flex items-center gap-2 text-amber-300">
-            {Array.from({ length: 5 }).map((_, i) => <Star key={i} className="h-5 w-5 fill-current" />)}
-            <span className="ml-2 text-sm text-muted-foreground">Verified Google Reviews</span>
-          </div>
-        </div>
-        <div className="mt-12 grid gap-4 md:grid-cols-3">
-          {reviews.map((r) => (
-            <figure key={r.name} className="flex h-full flex-col rounded-2xl border border-border bg-surface p-6">
-              <Quote className="h-6 w-6 text-primary" />
-              <blockquote className="mt-4 text-sm leading-relaxed text-foreground">"{r.body}"</blockquote>
-              <figcaption className="mt-6 border-t border-border pt-4">
-                <p className="text-sm font-medium">{r.name}</p>
-                <p className="text-xs text-muted-foreground">{r.co}</p>
-              </figcaption>
-            </figure>
-          ))}
-        </div>
-      </section>
+      {/* Reviews Marquee */}
+      <ReviewsMarquee />
 
       {/* Why us */}
       <section className="border-t border-border/60 bg-surface/30">
@@ -264,7 +248,7 @@ function HomePage() {
           </div>
           <ul className="grid gap-4">
             {[
-              { i: ShieldCheck, t: "Month-to-month, always", d: "Simple flat monthly pricing. No setup fees, no long contracts. Cancel any time." },
+              { i: ShieldCheck, t: "Month-to-month, always", d: "Simple flat monthly pricing. No long contracts. Cancel any time." },
               { i: Clock, t: "Live in under 14 days", d: "Calling agent, chatbot, reviews and follow-ups configured for your business." },
               { i: Check, t: "Built for the trades", d: "Specialized for HVAC, roofing, plumbing, electrical, and solar." },
               { i: TrendingUp, t: "Founder-led, transparent", d: "Direct line to Arman. No anonymous support tickets." },
@@ -281,17 +265,17 @@ function HomePage() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* Final CTA */}
       <section className="mx-auto max-w-7xl px-5 py-24 md:px-8">
         <div className="relative overflow-hidden rounded-3xl border border-primary/30 bg-gradient-to-br from-primary/15 via-surface to-surface p-10 md:p-16">
           <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-primary/30 blur-3xl" />
           <div className="relative max-w-2xl">
             <h2 className="text-4xl md:text-5xl">Ready to stop missing money?</h2>
-            <p className="mt-4 text-muted-foreground">Book a free 30-minute audit. We'll show you exactly where revenue is leaking — and what we'd do about it. No pitch. No pressure.</p>
+            <p className="mt-4 text-muted-foreground">Book a free 30-minute call. We'll show you exactly where revenue is leaking — and what we'd do about it. No pitch. No pressure.</p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link to="/contact" className="inline-flex h-12 items-center gap-2 rounded-full bg-primary px-6 text-sm font-medium text-primary-foreground ring-ember">
-                Claim your free audit <ArrowRight className="h-4 w-4" />
-              </Link>
+              <a href={CALENDLY} target="_blank" rel="noreferrer" className="inline-flex h-12 items-center gap-2 rounded-full bg-primary px-6 text-sm font-medium text-primary-foreground ring-ember">
+                <Calendar className="h-4 w-4" /> Book your free consultation <ArrowRight className="h-4 w-4" />
+              </a>
               <a href="https://wa.me/+13072784862" target="_blank" rel="noreferrer" className="inline-flex h-12 items-center gap-2 rounded-full border border-border/80 px-6 text-sm hover:bg-surface">
                 Chat on WhatsApp
               </a>

@@ -1,7 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/Layout";
 import { SERVICES } from "@/lib/services-data";
-import { ArrowRight, Check, ArrowLeft, Quote } from "lucide-react";
+import { ArrowRight, Check, ArrowLeft, Quote, Calendar } from "lucide-react";
 
 export const Route = createFileRoute("/services/$slug")({
   head: ({ params }) => {
@@ -64,8 +64,11 @@ function ServiceDetail() {
               <h1 className="mt-6 text-5xl md:text-6xl">{s.title}</h1>
               <p className="mt-5 max-w-2xl text-lg text-muted-foreground">{s.hero}</p>
               <div className="mt-7 flex flex-wrap items-center gap-3">
-                <a href="https://wa.me/+13072784862" target="_blank" rel="noreferrer" className="inline-flex h-12 items-center gap-2 rounded-full bg-primary px-6 text-sm font-medium text-primary-foreground">
-                  Get started — Chat on WhatsApp <ArrowRight className="h-4 w-4" />
+                <a href="https://calendly.com/arwebcrafts/30-mint" target="_blank" rel="noreferrer" className="inline-flex h-12 items-center gap-2 rounded-full bg-primary px-6 text-sm font-medium text-primary-foreground">
+                  <Calendar className="h-4 w-4" /> Book a free call <ArrowRight className="h-4 w-4" />
+                </a>
+                <a href="https://wa.me/+13072784862" target="_blank" rel="noreferrer" className="inline-flex h-12 items-center gap-2 rounded-full border border-border/80 px-6 text-sm hover:bg-surface">
+                  WhatsApp us
                 </a>
               </div>
             </div>
@@ -207,15 +210,15 @@ function ServiceDetail() {
         <div className="rounded-3xl border border-primary/30 bg-gradient-to-br from-primary/15 to-surface p-10 md:p-14">
           <h2 className="text-3xl md:text-4xl">Ready to get started?</h2>
           <p className="mt-3 max-w-2xl text-muted-foreground">
-            Send us a message on WhatsApp. We'll have a quick chat about your business and show you exactly how {s.title} would work for you. No pressure, no commitment.
+            Book a free 30-minute call. We'll look at your business and show you exactly how {s.title} would work for you. No pressure, no commitment.
           </p>
           <div className="mt-7 flex flex-wrap gap-3">
-            <a href="https://wa.me/+13072784862" target="_blank" rel="noreferrer" className="inline-flex h-12 items-center gap-2 rounded-full bg-primary px-6 text-sm font-medium text-primary-foreground">
-              Chat on WhatsApp <ArrowRight className="h-4 w-4" />
+            <a href="https://calendly.com/arwebcrafts/30-mint" target="_blank" rel="noreferrer" className="inline-flex h-12 items-center gap-2 rounded-full bg-primary px-6 text-sm font-medium text-primary-foreground ring-ember">
+              <Calendar className="h-4 w-4" /> Book your free call <ArrowRight className="h-4 w-4" />
             </a>
-            <Link to="/contact" className="inline-flex h-12 items-center gap-2 rounded-full border border-border/80 px-6 text-sm hover:bg-surface">
-              Or fill out a form
-            </Link>
+            <a href="https://wa.me/+13072784862" target="_blank" rel="noreferrer" className="inline-flex h-12 items-center gap-2 rounded-full border border-border/80 px-6 text-sm hover:bg-surface">
+              Chat on WhatsApp
+            </a>
           </div>
         </div>
       </section>
