@@ -1,7 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/Layout";
 import { SERVICES } from "@/lib/services-data";
-import { ArrowRight, Check, ArrowLeft } from "lucide-react";
+import { ArrowRight, Check, ArrowLeft, Quote } from "lucide-react";
 
 export const Route = createFileRoute("/services/$slug")({
   head: ({ params }) => {
@@ -48,6 +48,7 @@ function ServiceDetail() {
 
   return (
     <SiteLayout>
+      {/* ── Hero ── */}
       <section className="relative overflow-hidden border-b border-border">
         <div className="absolute inset-0 bg-grid opacity-30" />
         <div className="absolute inset-0 bg-radial-ember" />
@@ -57,16 +58,15 @@ function ServiceDetail() {
           </Link>
           <div className="mt-8 grid gap-10 md:grid-cols-12 md:gap-12">
             <div className="md:col-span-8">
-              <div className="inline-grid h-12 w-12 place-items-center rounded-xl bg-primary/15 text-primary">
-                <Icon className="h-6 w-6" />
+              <div className="inline-grid h-14 w-14 place-items-center rounded-2xl bg-primary/15 text-primary">
+                <Icon className="h-7 w-7" />
               </div>
               <h1 className="mt-6 text-5xl md:text-6xl">{s.title}</h1>
               <p className="mt-5 max-w-2xl text-lg text-muted-foreground">{s.hero}</p>
               <div className="mt-7 flex flex-wrap items-center gap-3">
                 <a href="https://wa.me/+13072784862" target="_blank" rel="noreferrer" className="inline-flex h-12 items-center gap-2 rounded-full bg-primary px-6 text-sm font-medium text-primary-foreground">
-                  Chat on WhatsApp <ArrowRight className="h-4 w-4" />
+                  Get started — Chat on WhatsApp <ArrowRight className="h-4 w-4" />
                 </a>
-                <span className="rounded-full border border-border bg-surface px-4 py-2 text-sm text-muted-foreground">{s.price}</span>
               </div>
             </div>
             <aside className="md:col-span-4">
@@ -75,10 +75,10 @@ function ServiceDetail() {
                 <p className="mt-3 font-display text-5xl text-gradient-ember">{s.stat.k}</p>
                 <p className="mt-1 text-sm">{s.stat.v}</p>
                 <ul className="mt-6 space-y-2">
-                  {s.points.map((p) => (
-                    <li key={p} className="flex items-start gap-2 text-sm">
+                  {s.benefits.slice(0, 4).map((b) => (
+                    <li key={b} className="flex items-start gap-2 text-sm">
                       <Check className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                      <span>{p}</span>
+                      <span>{b}</span>
                     </li>
                   ))}
                 </ul>
@@ -88,19 +88,82 @@ function ServiceDetail() {
         </div>
       </section>
 
+      {/* ── The Problem / Why this matters ── */}
+      <section className="mx-auto max-w-4xl px-5 py-20 md:px-8">
+        <h2 className="text-3xl md:text-4xl">Why this matters for your business</h2>
+        <p className="mt-5 text-lg leading-relaxed text-muted-foreground">{s.longDescription}</p>
+      </section>
+
+      {/* ── Benefits ── */}
+      <section className="border-t border-border/60 bg-surface/30">
+        <div className="mx-auto max-w-7xl px-5 py-20 md:px-8">
+          <p className="text-xs uppercase tracking-widest text-primary">What you get</p>
+          <h2 className="mt-3 max-w-2xl text-3xl md:text-4xl">Simple benefits. Real results.</h2>
+          <div className="mt-10 grid gap-3 md:grid-cols-2 lg:grid-cols-3">
+            {s.benefits.map((b) => (
+              <div key={b} className="flex items-start gap-3 rounded-2xl border border-border bg-surface p-5">
+                <Check className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                <span className="text-sm">{b}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── How It Works ── */}
       <section className="mx-auto max-w-7xl px-5 py-20 md:px-8">
-        <p className="text-xs uppercase tracking-widest text-primary">What's inside</p>
-        <h2 className="mt-3 max-w-2xl text-4xl md:text-5xl">Built deep, not wide.</h2>
-        <div className="mt-10 grid gap-4 md:grid-cols-2">
-          {s.features.map((f) => (
-            <div key={f.title} className="rounded-2xl border border-border bg-surface p-6">
-              <h3 className="text-xl font-semibold tracking-tight">{f.title}</h3>
-              <p className="mt-2 text-muted-foreground">{f.desc}</p>
+        <p className="text-xs uppercase tracking-widest text-primary">How it works</p>
+        <h2 className="mt-3 max-w-2xl text-3xl md:text-4xl">Three simple steps.</h2>
+        <div className="mt-10 grid gap-4 md:grid-cols-3">
+          {s.howItWorks.map((h, i) => (
+            <div key={h.step} className="rounded-2xl border border-border bg-surface p-6">
+              <div className="font-display text-sm text-primary">0{i + 1}</div>
+              <h3 className="mt-2 text-lg font-semibold">{h.step}</h3>
+              <p className="mt-2 text-sm text-muted-foreground">{h.detail}</p>
             </div>
           ))}
         </div>
       </section>
 
+      {/* ── Features ── */}
+      <section className="border-t border-border/60 bg-surface/30">
+        <div className="mx-auto max-w-7xl px-5 py-20 md:px-8">
+          <p className="text-xs uppercase tracking-widest text-primary">Under the hood</p>
+          <h2 className="mt-3 max-w-2xl text-3xl md:text-4xl">What's included</h2>
+          <div className="mt-10 grid gap-4 md:grid-cols-2">
+            {s.features.map((f) => (
+              <div key={f.title} className="rounded-2xl border border-border bg-background p-6">
+                <h3 className="text-lg font-semibold tracking-tight">{f.title}</h3>
+                <p className="mt-2 text-sm text-muted-foreground">{f.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Case Study ── */}
+      <section className="mx-auto max-w-7xl px-5 py-20 md:px-8">
+        <p className="text-xs uppercase tracking-widest text-primary">Real results</p>
+        <h2 className="mt-3 text-3xl md:text-4xl">See it in action</h2>
+        <div className="mt-10 rounded-3xl border border-border/60 bg-surface p-8 md:p-10">
+          <div className="grid gap-8 md:grid-cols-12">
+            <div className="md:col-span-4">
+              <p className="text-xs uppercase tracking-widest text-muted-foreground">{s.caseStudy.trade}</p>
+              <p className="mt-1 text-lg font-semibold">{s.caseStudy.company}</p>
+              <p className="mt-6 font-display text-6xl text-gradient-ember">{s.caseStudy.metric}</p>
+              <p className="mt-1 text-sm text-foreground">{s.caseStudy.unit}</p>
+            </div>
+            <div className="md:col-span-8 flex items-center">
+              <div>
+                <Quote className="h-8 w-8 text-primary/30" />
+                <p className="mt-4 text-lg leading-relaxed text-muted-foreground">{s.caseStudy.story}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── FAQ ── */}
       {s.faq.length > 0 && (
         <section className="border-t border-border bg-surface/40">
           <div className="mx-auto max-w-4xl px-5 py-20 md:px-8">
@@ -109,7 +172,7 @@ function ServiceDetail() {
               {s.faq.map((f) => (
                 <div key={f.q} className="rounded-2xl border border-border bg-background p-6">
                   <dt className="font-medium">{f.q}</dt>
-                  <dd className="mt-2 text-muted-foreground">{f.a}</dd>
+                  <dd className="mt-2 text-sm text-muted-foreground">{f.a}</dd>
                 </div>
               ))}
             </dl>
@@ -117,25 +180,7 @@ function ServiceDetail() {
         </section>
       )}
 
-      {s.caseStudies && s.caseStudies.length > 0 && (
-        <section className="border-t border-border/60 bg-surface/30">
-          <div className="mx-auto max-w-7xl px-5 py-20 md:px-8">
-            <p className="text-xs uppercase tracking-widest text-primary">Case Studies</p>
-            <h2 className="mt-3 text-3xl md:text-4xl">Real results for {s.title}</h2>
-            <div className="mt-10 grid gap-4 md:grid-cols-2">
-              {s.caseStudies.map((c) => (
-                <article key={c.company} className="rounded-2xl border border-border/60 bg-surface-elevated p-6">
-                  <p className="text-sm font-medium">{c.company}</p>
-                  <p className="mt-6 font-display text-5xl text-gradient-ember">{c.metric}</p>
-                  <p className="mt-1 text-sm font-medium text-foreground">{c.unit}</p>
-                  <p className="mt-3 text-sm text-muted-foreground">{c.description}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
+      {/* ── Other Services ── */}
       <section className="mx-auto max-w-7xl px-5 py-20 md:px-8">
         <h2 className="text-3xl md:text-4xl">Other services</h2>
         <div className="mt-8 grid gap-4 md:grid-cols-3">
@@ -157,13 +202,21 @@ function ServiceDetail() {
         </div>
       </section>
 
+      {/* ── Bottom CTA ── */}
       <section className="mx-auto max-w-7xl px-5 pb-24 md:px-8">
         <div className="rounded-3xl border border-primary/30 bg-gradient-to-br from-primary/15 to-surface p-10 md:p-14">
-          <h2 className="text-3xl md:text-4xl">Want this live in your business?</h2>
-          <p className="mt-3 max-w-2xl text-muted-foreground">Book a 30-minute demo. We'll show you exactly how {s.title} would work for your trade and service area.</p>
-          <a href="https://wa.me/+13072784862" target="_blank" rel="noreferrer" className="mt-7 inline-flex h-12 items-center gap-2 rounded-full bg-primary px-6 text-sm font-medium text-primary-foreground">
-            Chat on WhatsApp <ArrowRight className="h-4 w-4" />
-          </a>
+          <h2 className="text-3xl md:text-4xl">Ready to get started?</h2>
+          <p className="mt-3 max-w-2xl text-muted-foreground">
+            Send us a message on WhatsApp. We'll have a quick chat about your business and show you exactly how {s.title} would work for you. No pressure, no commitment.
+          </p>
+          <div className="mt-7 flex flex-wrap gap-3">
+            <a href="https://wa.me/+13072784862" target="_blank" rel="noreferrer" className="inline-flex h-12 items-center gap-2 rounded-full bg-primary px-6 text-sm font-medium text-primary-foreground">
+              Chat on WhatsApp <ArrowRight className="h-4 w-4" />
+            </a>
+            <Link to="/contact" className="inline-flex h-12 items-center gap-2 rounded-full border border-border/80 px-6 text-sm hover:bg-surface">
+              Or fill out a form
+            </Link>
+          </div>
         </div>
       </section>
     </SiteLayout>

@@ -45,7 +45,6 @@ function PackagePage() {
   const { pack } = Route.useLoaderData() as { pack: typeof PACKAGES[number] };
   const isFlagship = pack.slug === "done-for-you";
 
-  // Map packages to which services they include for the visual grid
   const serviceMap: Record<string, string[]> = {
     starter: ["ai-calling-agent", "review-engine", "conversion-website"],
     growth: ["ai-calling-agent", "review-engine", "conversion-website", "ai-chatbot", "lead-follow-up", "local-seo-social"],
@@ -66,15 +65,11 @@ function PackagePage() {
             {pack.tagline.split(".")[0]}.{" "}
             <span className="text-gradient-ember">{pack.tagline.split(".")[1]?.trim()}</span>
           </h1>
-          <p className={`mt-6 max-w-2xl text-lg ${isFlagship ? "text-muted-foreground" : "text-muted-foreground"}`}>{pack.summary}</p>
-          <div className="mt-8 flex flex-wrap items-end gap-6">
-            <div>
-              <span className={`font-display text-6xl ${isFlagship ? "text-espresso-foreground" : ""}`}>{pack.price}</span>
-              <span className={`ml-1 text-lg ${isFlagship ? "text-muted-foreground" : "text-muted-foreground"}`}>{pack.period}</span>
-            </div>
-            <Link to="/contact" className="inline-flex h-12 items-center gap-2 rounded-full bg-primary px-6 text-sm font-medium text-primary-foreground ring-ember">
-              Get started <ArrowRight className="h-4 w-4" />
-            </Link>
+          <p className="mt-6 max-w-2xl text-lg text-muted-foreground">{pack.summary}</p>
+          <div className="mt-8">
+            <a href="https://wa.me/+13072784862" target="_blank" rel="noreferrer" className="inline-flex h-12 items-center gap-2 rounded-full bg-primary px-6 text-sm font-medium text-primary-foreground ring-ember">
+              Get started — Chat on WhatsApp <ArrowRight className="h-4 w-4" />
+            </a>
           </div>
         </div>
       </section>
@@ -107,9 +102,9 @@ function PackagePage() {
                 <p className="text-xs uppercase tracking-widest text-muted-foreground">Contract</p>
                 <p className="mt-2 font-display text-3xl">Month-to-month</p>
               </div>
-              <Link to="/contact" className="mt-7 inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-primary text-sm font-medium text-primary-foreground">
+              <a href="https://wa.me/+13072784862" target="_blank" rel="noreferrer" className="mt-7 inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-primary text-sm font-medium text-primary-foreground">
                 Talk to Arman <ArrowRight className="h-4 w-4" />
-              </Link>
+              </a>
             </div>
           </aside>
         </div>
@@ -118,7 +113,7 @@ function PackagePage() {
       <section className="border-t border-border bg-surface/40">
         <div className="mx-auto max-w-7xl px-5 py-20 md:px-8">
           <h2 className="text-3xl md:text-4xl">Included services</h2>
-          <p className="mt-3 max-w-2xl text-muted-foreground">Click any module to see exactly how it works.</p>
+          <p className="mt-3 max-w-2xl text-muted-foreground">Click any service to see exactly how it works.</p>
           <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {includedServices.map((s) => {
               const I = s.icon;
@@ -150,8 +145,10 @@ function PackagePage() {
               className={`rounded-2xl border p-6 transition-colors ${p.slug === pack.slug ? "border-primary bg-primary/5" : "border-border bg-surface hover:border-primary/40"}`}
             >
               <p className="text-xs uppercase tracking-widest text-primary">{p.name}</p>
-              <p className="mt-3 font-display text-3xl">{p.price}<span className="text-base text-muted-foreground">{p.period}</span></p>
               <p className="mt-3 text-sm text-muted-foreground">{p.tagline}</p>
+              <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary">
+                {p.slug === pack.slug ? "Current plan" : "View plan"} <ArrowRight className="h-4 w-4" />
+              </span>
             </Link>
           ))}
         </div>
