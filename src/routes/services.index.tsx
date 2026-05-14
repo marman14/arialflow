@@ -3,7 +3,7 @@ import { SiteLayout } from "@/components/site/Layout";
 import { SERVICES } from "@/lib/services-data";
 import { ArrowRight } from "lucide-react";
 
-export const Route = createFileRoute("/services")({
+export const Route = createFileRoute("/services/")({
   head: () => ({
     meta: [
       { title: "Our Services — Arialflow" },
