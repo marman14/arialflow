@@ -16,6 +16,7 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ServicesSlugRouteImport } from './routes/services.$slug'
 import { Route as PackagesTierRouteImport } from './routes/packages.$tier'
+import { Route as LocationsSlugRouteImport } from './routes/locations.$slug'
 
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
@@ -52,6 +53,11 @@ const PackagesTierRoute = PackagesTierRouteImport.update({
   path: '/packages/$tier',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LocationsSlugRoute = LocationsSlugRouteImport.update({
+  id: '/locations/$slug',
+  path: '/locations/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -59,6 +65,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/process': typeof ProcessRoute
   '/services': typeof ServicesRouteWithChildren
+  '/locations/$slug': typeof LocationsSlugRoute
   '/packages/$tier': typeof PackagesTierRoute
   '/services/$slug': typeof ServicesSlugRoute
 }
@@ -68,6 +75,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/process': typeof ProcessRoute
   '/services': typeof ServicesRouteWithChildren
+  '/locations/$slug': typeof LocationsSlugRoute
   '/packages/$tier': typeof PackagesTierRoute
   '/services/$slug': typeof ServicesSlugRoute
 }
@@ -78,6 +86,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/process': typeof ProcessRoute
   '/services': typeof ServicesRouteWithChildren
+  '/locations/$slug': typeof LocationsSlugRoute
   '/packages/$tier': typeof PackagesTierRoute
   '/services/$slug': typeof ServicesSlugRoute
 }
@@ -89,6 +98,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/process'
     | '/services'
+    | '/locations/$slug'
     | '/packages/$tier'
     | '/services/$slug'
   fileRoutesByTo: FileRoutesByTo
@@ -98,6 +108,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/process'
     | '/services'
+    | '/locations/$slug'
     | '/packages/$tier'
     | '/services/$slug'
   id:
@@ -107,6 +118,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/process'
     | '/services'
+    | '/locations/$slug'
     | '/packages/$tier'
     | '/services/$slug'
   fileRoutesById: FileRoutesById
@@ -117,6 +129,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   ProcessRoute: typeof ProcessRoute
   ServicesRoute: typeof ServicesRouteWithChildren
+  LocationsSlugRoute: typeof LocationsSlugRoute
   PackagesTierRoute: typeof PackagesTierRoute
 }
 
@@ -171,6 +184,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PackagesTierRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/locations/$slug': {
+      id: '/locations/$slug'
+      path: '/locations/$slug'
+      fullPath: '/locations/$slug'
+      preLoaderRoute: typeof LocationsSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -192,6 +212,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   ProcessRoute: ProcessRoute,
   ServicesRoute: ServicesRouteWithChildren,
+  LocationsSlugRoute: LocationsSlugRoute,
   PackagesTierRoute: PackagesTierRoute,
 }
 export const routeTree = rootRouteImport

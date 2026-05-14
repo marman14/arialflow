@@ -4,11 +4,7 @@ import {
   Link,
   createRootRouteWithContext,
   useRouter,
-  HeadContent,
-  Scripts,
 } from "@tanstack/react-router";
-
-import appCss from "../styles.css?url";
 
 function NotFoundComponent() {
   return (
@@ -68,89 +64,11 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 }
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
-  head: () => ({
-    meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Arialflow" },
-      { name: "description", content: "Aria Flow Design is a web application for creating and managing complex workflows and business processes." },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Arialflow" },
-      { property: "og:description", content: "Aria Flow Design is a web application for creating and managing complex workflows and business processes." },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "Arialflow" },
-      { name: "twitter:description", content: "Aria Flow Design is a web application for creating and managing complex workflows and business processes." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/89fc0d85-4deb-483d-bdc0-444481faf545/id-preview-6bd54fac--8d05d933-78f4-4f94-be82-490e86e6051f.lovable.app-1778542221693.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/89fc0d85-4deb-483d-bdc0-444481faf545/id-preview-6bd54fac--8d05d933-78f4-4f94-be82-490e86e6051f.lovable.app-1778542221693.png" },
-    ],
-    links: [
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
-    ],
-  }),
-  shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
   errorComponent: ErrorComponent,
 });
 
-function RootShell({ children }: { children: React.ReactNode }) {
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Arialflow",
-    "image": "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/89fc0d85-4deb-483d-bdc0-444481faf545/id-preview-6bd54fac--8d05d933-78f4-4f94-be82-490e86e6051f.lovable.app-1778542221693.png",
-    "url": "https://www.arialflow.com/",
-    "telephone": "+1-800-000-0000",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "123 Growth Ave",
-      "addressLocality": "Dallas",
-      "addressRegion": "TX",
-      "postalCode": "75201",
-      "addressCountry": "US"
-    },
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday"
-        ],
-        "opens": "09:00",
-        "closes": "18:00"
-      }
-    ]
-  };
-
-  return (
-    <html lang="en">
-      <head>
-        <HeadContent />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-      </head>
-      <body>
-        {children}
-        <Scripts />
-      </body>
-    </html>
-  );
-}
-
 function RootComponent() {
-  const { queryClient } = Route.useRouteContext();
-
-  return (
-    <QueryClientProvider client={queryClient}>
-      <Outlet />
-    </QueryClientProvider>
-  );
+  return <Outlet />;
 }
