@@ -1,14 +1,14 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/Layout";
-import { ArrowRight, Check, Sparkles, Shield, Zap } from "lucide-react";
+import { ArrowRight, Check, Sparkles, Shield, Zap, Calendar } from "lucide-react";
 
 export const Route = createFileRoute("/investment")({
   head: () => ({
     meta: [
       { title: "Investment — Arialflow Growth Plans for Contractors" },
-      { name: "description", content: "Transparent, month-to-month pricing for HVAC, roofing, and plumbing businesses. Choose the plan that fits your business — cancel any time." },
+      { name: "description", content: "Growth plans for HVAC, roofing, and plumbing businesses in Texas and Florida. Book a call to find the right fit." },
       { property: "og:title", content: "Arialflow Investment" },
-      { property: "og:description", content: "Growth plans built for the trades. No long contracts." },
+      { property: "og:description", content: "Growth plans built for the trades." },
     ],
   }),
   component: InvestmentPage,
@@ -84,8 +84,11 @@ function InvestmentPage() {
             Simple pricing. <span className="text-gradient-ember">Real results.</span>
           </h1>
           <p className="mt-5 max-w-2xl text-lg text-muted-foreground">
-            No setup fees. No long contracts. Month-to-month plans that pay for themselves in booked jobs. Pick the one that fits your business — or chat with us and we'll recommend one.
+            Choose the plan that fits your business — or book a quick call and we'll walk you through everything and recommend the right fit.
           </p>
+          <a href="https://calendly.com/arwebcrafts/30-mint" target="_blank" rel="noreferrer" className="mt-7 inline-flex h-12 items-center gap-2 rounded-full bg-primary px-6 text-sm font-medium text-primary-foreground">
+            <Calendar className="h-4 w-4" /> Book a free 30-min call
+          </a>
         </div>
       </section>
 
@@ -136,7 +139,7 @@ function InvestmentPage() {
                 </div>
 
                 <a
-                  href="https://wa.me/+13072784862"
+                  href="https://calendly.com/arwebcrafts/30-mint"
                   target="_blank"
                   rel="noreferrer"
                   className={`mt-6 inline-flex h-12 items-center justify-center gap-2 rounded-full px-6 text-sm font-medium transition-transform hover:-translate-y-0.5 ${
@@ -145,7 +148,7 @@ function InvestmentPage() {
                       : "border border-border bg-background text-foreground hover:bg-surface"
                   }`}
                 >
-                  Get started <ArrowRight className="h-4 w-4" />
+                  <Calendar className="h-4 w-4" /> Book a call
                 </a>
               </div>
             );
@@ -153,41 +156,24 @@ function InvestmentPage() {
         </div>
       </section>
 
-      {/* Guarantees */}
+      {/* FAQ */}
       <section className="border-t border-border/60 bg-surface/30">
-        <div className="mx-auto max-w-7xl px-5 py-20 md:px-8">
-          <div className="grid gap-6 md:grid-cols-3">
+        <div className="mx-auto max-w-4xl px-5 py-20 md:px-8">
+          <h2 className="text-3xl md:text-4xl">Common questions</h2>
+          <dl className="mt-8 space-y-4">
             {[
-              { title: "No setup fees", desc: "We build everything for you — calling agent, chatbot, website, review engine — at zero upfront cost." },
-              { title: "Month-to-month", desc: "No annual contracts. No cancellation fees. If we don't earn your business every month, you shouldn't be paying us." },
-              { title: "Live in 14 days", desc: "From the day you sign up, your complete growth system is configured, tested, and live in under two weeks." },
-            ].map((g) => (
-              <div key={g.title} className="rounded-2xl border border-border bg-background p-6">
-                <h3 className="text-lg font-semibold">{g.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{g.desc}</p>
+              { q: "Can I switch plans later?", a: "Yes. You can upgrade or downgrade at any time. Changes take effect on your next billing cycle." },
+              { q: "How fast will I see results?", a: "Most contractors see their first AI-booked appointment within the first week. Review growth and SEO ranking improvements build over 30–90 days." },
+              { q: "Do I need to be tech-savvy?", a: "Not at all. We set everything up and manage it for you. All you need is your phone." },
+              { q: "What happens on the call?", a: "We'll ask about your business, your service area, and where you're losing jobs. Then we'll recommend the best plan and walk you through exactly what to expect." },
+            ].map((f) => (
+              <div key={f.q} className="rounded-2xl border border-border bg-background p-6">
+                <dt className="font-medium">{f.q}</dt>
+                <dd className="mt-2 text-sm text-muted-foreground">{f.a}</dd>
               </div>
             ))}
-          </div>
+          </dl>
         </div>
-      </section>
-
-      {/* FAQ */}
-      <section className="mx-auto max-w-4xl px-5 py-20 md:px-8">
-        <h2 className="text-3xl md:text-4xl">Common questions</h2>
-        <dl className="mt-8 space-y-4">
-          {[
-            { q: "Can I switch plans later?", a: "Yes. You can upgrade or downgrade at any time. Changes take effect on your next billing cycle." },
-            { q: "Is there a setup fee?", a: "No. Setup, configuration, and your conversion website are all included at no extra cost." },
-            { q: "How fast will I see results?", a: "Most contractors see their first AI-booked appointment within the first week. Review growth and SEO ranking improvements build over 30–90 days." },
-            { q: "What if it doesn't work for me?", a: "Cancel any time — no penalty, no questions asked. We've never had a contractor cancel in the first 90 days because the ROI is immediate." },
-            { q: "Do I need to be tech-savvy?", a: "Not at all. We set everything up and manage it for you. All you need is your phone." },
-          ].map((f) => (
-            <div key={f.q} className="rounded-2xl border border-border bg-surface p-6">
-              <dt className="font-medium">{f.q}</dt>
-              <dd className="mt-2 text-sm text-muted-foreground">{f.a}</dd>
-            </div>
-          ))}
-        </dl>
       </section>
 
       {/* Bottom CTA */}
@@ -195,17 +181,17 @@ function InvestmentPage() {
         <div className="relative overflow-hidden rounded-3xl border border-primary/30 bg-gradient-to-br from-primary/15 via-surface to-surface p-10 md:p-16">
           <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-primary/30 blur-3xl" />
           <div className="relative max-w-2xl">
-            <h2 className="text-4xl md:text-5xl">Not sure which plan is right?</h2>
+            <h2 className="text-4xl md:text-5xl">Let's talk about your business.</h2>
             <p className="mt-4 text-muted-foreground">
-              Message us on WhatsApp. We'll ask a few questions about your business and recommend the right fit — no sales pitch, no pressure.
+              Book a free 30-minute call. We'll look at where you're losing leads and jobs, and show you exactly how we'd fix it. No commitment — just an honest conversation about your growth.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <a href="https://wa.me/+13072784862" target="_blank" rel="noreferrer" className="inline-flex h-12 items-center gap-2 rounded-full bg-primary px-6 text-sm font-medium text-primary-foreground ring-ember">
-                Chat on WhatsApp <ArrowRight className="h-4 w-4" />
+              <a href="https://calendly.com/arwebcrafts/30-mint" target="_blank" rel="noreferrer" className="inline-flex h-12 items-center gap-2 rounded-full bg-primary px-6 text-sm font-medium text-primary-foreground ring-ember">
+                <Calendar className="h-4 w-4" /> Book your free call <ArrowRight className="h-4 w-4" />
               </a>
-              <Link to="/contact" className="inline-flex h-12 items-center gap-2 rounded-full border border-border/80 px-6 text-sm hover:bg-surface">
-                Or fill out a form
-              </Link>
+              <a href="https://wa.me/+13072784862" target="_blank" rel="noreferrer" className="inline-flex h-12 items-center gap-2 rounded-full border border-border/80 px-6 text-sm hover:bg-surface">
+                Or message on WhatsApp
+              </a>
             </div>
           </div>
         </div>

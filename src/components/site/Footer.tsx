@@ -13,7 +13,7 @@ export function Footer() {
             <span className="font-display text-lg font-semibold text-espresso-foreground">Arialflow</span>
           </div>
           <p className="mt-4 max-w-sm text-sm text-muted-foreground">
-            Serving HVAC contractors, roofers & plumbers across the USA, UK, Canada & Australia. We help you get more reviews, capture every lead, and increase repeat bookings without the manual work.
+            AI-powered growth systems for HVAC contractors, roofers & plumbers across Texas and Florida. We help you capture every lead, get more reviews, and book more jobs — without the manual work.
           </p>
           <div className="mt-5 space-y-1.5 text-sm text-espresso-foreground">
             <div className="flex items-center gap-2">
@@ -44,11 +44,9 @@ export function Footer() {
             <li><Link to="/terms" className="hover:text-espresso-foreground">Terms of Service</Link></li>
             <li><Link to="/privacy" className="hover:text-espresso-foreground">Privacy Policy</Link></li>
           </ul>
-          <p className="font-display mt-6 text-base font-semibold text-espresso-foreground">Service Areas</p>
+          <p className="font-display mt-6 text-base font-semibold text-espresso-foreground">Book a Call</p>
           <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-            <li><Link to="/locations/$slug" params={{ slug: "dallas-tx" }} className="hover:text-espresso-foreground">Dallas, TX</Link></li>
-            <li><Link to="/locations/$slug" params={{ slug: "tampa-fl" }} className="hover:text-espresso-foreground">Tampa, FL</Link></li>
-            <li><Link to="/locations/$slug" params={{ slug: "houston-tx" }} className="hover:text-espresso-foreground">Houston, TX</Link></li>
+            <li><a href="https://calendly.com/arwebcrafts/30-mint" target="_blank" rel="noreferrer" className="hover:text-espresso-foreground">Free 30-min Strategy Call</a></li>
           </ul>
         </div>
         <div>
@@ -57,7 +55,7 @@ export function Footer() {
             <li><span className="block text-espresso-foreground">WhatsApp</span><a href="https://wa.me/+13072784862" className="hover:text-espresso-foreground" target="_blank" rel="noreferrer">+1 (307) 278-4862</a></li>
             <li><span className="block text-espresso-foreground">Email</span>contact@arialflow.com</li>
             <li><span className="block text-espresso-foreground">Hours</span>Mon–Fri · 8am–7pm CT</li>
-            <li><span className="block text-espresso-foreground">Regions</span>USA · UK · Canada · AU</li>
+            <li><span className="block text-espresso-foreground">Serving</span>Texas & Florida, USA</li>
           </ul>
         </div>
       </div>
