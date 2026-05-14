@@ -9,7 +9,10 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TermsRouteImport } from './routes/terms'
 import { Route as ProcessRouteImport } from './routes/process'
+import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as InvestmentRouteImport } from './routes/investment'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
@@ -18,9 +21,24 @@ import { Route as ServicesSlugRouteImport } from './routes/services.$slug'
 import { Route as PackagesTierRouteImport } from './routes/packages.$tier'
 import { Route as LocationsSlugRouteImport } from './routes/locations.$slug'
 
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ProcessRoute = ProcessRouteImport.update({
   id: '/process',
   path: '/process',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InvestmentRoute = InvestmentRouteImport.update({
+  id: '/investment',
+  path: '/investment',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -63,7 +81,10 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
+  '/investment': typeof InvestmentRoute
+  '/privacy': typeof PrivacyRoute
   '/process': typeof ProcessRoute
+  '/terms': typeof TermsRoute
   '/locations/$slug': typeof LocationsSlugRoute
   '/packages/$tier': typeof PackagesTierRoute
   '/services/$slug': typeof ServicesSlugRoute
@@ -73,7 +94,10 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
+  '/investment': typeof InvestmentRoute
+  '/privacy': typeof PrivacyRoute
   '/process': typeof ProcessRoute
+  '/terms': typeof TermsRoute
   '/locations/$slug': typeof LocationsSlugRoute
   '/packages/$tier': typeof PackagesTierRoute
   '/services/$slug': typeof ServicesSlugRoute
@@ -84,7 +108,10 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
+  '/investment': typeof InvestmentRoute
+  '/privacy': typeof PrivacyRoute
   '/process': typeof ProcessRoute
+  '/terms': typeof TermsRoute
   '/locations/$slug': typeof LocationsSlugRoute
   '/packages/$tier': typeof PackagesTierRoute
   '/services/$slug': typeof ServicesSlugRoute
@@ -96,7 +123,10 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/contact'
+    | '/investment'
+    | '/privacy'
     | '/process'
+    | '/terms'
     | '/locations/$slug'
     | '/packages/$tier'
     | '/services/$slug'
@@ -106,7 +136,10 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/contact'
+    | '/investment'
+    | '/privacy'
     | '/process'
+    | '/terms'
     | '/locations/$slug'
     | '/packages/$tier'
     | '/services/$slug'
@@ -116,7 +149,10 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/contact'
+    | '/investment'
+    | '/privacy'
     | '/process'
+    | '/terms'
     | '/locations/$slug'
     | '/packages/$tier'
     | '/services/$slug'
@@ -127,7 +163,10 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
+  InvestmentRoute: typeof InvestmentRoute
+  PrivacyRoute: typeof PrivacyRoute
   ProcessRoute: typeof ProcessRoute
+  TermsRoute: typeof TermsRoute
   LocationsSlugRoute: typeof LocationsSlugRoute
   PackagesTierRoute: typeof PackagesTierRoute
   ServicesSlugRoute: typeof ServicesSlugRoute
@@ -136,11 +175,32 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/process': {
       id: '/process'
       path: '/process'
       fullPath: '/process'
       preLoaderRoute: typeof ProcessRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/investment': {
+      id: '/investment'
+      path: '/investment'
+      fullPath: '/investment'
+      preLoaderRoute: typeof InvestmentRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -199,7 +259,10 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
+  InvestmentRoute: InvestmentRoute,
+  PrivacyRoute: PrivacyRoute,
   ProcessRoute: ProcessRoute,
+  TermsRoute: TermsRoute,
   LocationsSlugRoute: LocationsSlugRoute,
   PackagesTierRoute: PackagesTierRoute,
   ServicesSlugRoute: ServicesSlugRoute,

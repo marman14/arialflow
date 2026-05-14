@@ -33,6 +33,7 @@ export function Footer() {
             <li><Link to="/services" className="hover:text-espresso-foreground">AI Services</Link></li>
             <li><Link to="/packages/done-for-you" className="hover:text-espresso-foreground">Done-For-You</Link></li>
             <li><Link to="/process" className="hover:text-espresso-foreground">Process</Link></li>
+            <li><Link to="/investment" className="hover:text-espresso-foreground">Investment</Link></li>
           </ul>
         </div>
         <div>
@@ -40,10 +41,10 @@ export function Footer() {
           <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
             <li><Link to="/about" className="hover:text-espresso-foreground">About</Link></li>
             <li><Link to="/contact" className="hover:text-espresso-foreground">Contact</Link></li>
+            <li><Link to="/terms" className="hover:text-espresso-foreground">Terms of Service</Link></li>
+            <li><Link to="/privacy" className="hover:text-espresso-foreground">Privacy Policy</Link></li>
           </ul>
-        </div>
-        <div>
-          <p className="font-display text-base font-semibold text-espresso-foreground">Service Areas</p>
+          <p className="font-display mt-6 text-base font-semibold text-espresso-foreground">Service Areas</p>
           <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
             <li><Link to="/locations/$slug" params={{ slug: "dallas-tx" }} className="hover:text-espresso-foreground">Dallas, TX</Link></li>
             <li><Link to="/locations/$slug" params={{ slug: "tampa-fl" }} className="hover:text-espresso-foreground">Tampa, FL</Link></li>
@@ -62,8 +63,11 @@ export function Footer() {
       </div>
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-5 py-5 text-xs text-muted-foreground md:flex-row md:px-8">
-          <p>© {new Date().getFullYear()} Arialflow. All rights reserved.</p>
-          <p>Built for contractors who'd rather be on the job site.</p>
+          <p>© {new Date().getFullYear()} Arialflow. All rights reserved. A companion of <a href="https://arwebcrafts.com" target="_blank" rel="noreferrer" className="text-espresso-foreground hover:text-primary">AR Webcrafts</a>.</p>
+          <div className="flex gap-4">
+            <Link to="/terms" className="hover:text-espresso-foreground">Terms</Link>
+            <Link to="/privacy" className="hover:text-espresso-foreground">Privacy</Link>
+          </div>
         </div>
       </div>
     </footer>
