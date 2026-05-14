@@ -4,8 +4,8 @@ import { useState } from "react";
 
 const nav = [
   { to: "/", label: "Home" },
-  { to: "/services", label: "AI Services" },
-  { to: "/packages/done-for-you", label: "Done-For-You" },
+  { to: "/services", label: "Services" },
+  { to: "/case-studies", label: "Case Studies" },
   { to: "/process", label: "Process" },
   { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
@@ -35,12 +35,14 @@ export function Header() {
           ))}
         </nav>
         <div className="hidden lg:block">
-          <Link
-            to="/contact"
+          <a
+            href="https://calendly.com/arwebcrafts/30-mint"
+            target="_blank"
+            rel="noreferrer"
             className="inline-flex h-10 items-center rounded-full bg-primary px-5 text-sm font-medium text-primary-foreground transition-transform hover:-translate-y-0.5"
           >
-            Free Growth Audit
-          </Link>
+            Book a Free Call
+          </a>
         </div>
         <button className="lg:hidden" onClick={() => setOpen((v) => !v)} aria-label="Menu">
           {open ? <X /> : <Menu />}
@@ -54,9 +56,9 @@ export function Header() {
                 {n.label}
               </Link>
             ))}
-            <Link to="/contact" onClick={() => setOpen(false)} className="mt-2 inline-flex h-10 items-center justify-center rounded-full bg-primary px-5 text-sm font-medium text-primary-foreground">
-              Free Growth Audit
-            </Link>
+            <a href="https://calendly.com/arwebcrafts/30-mint" target="_blank" rel="noreferrer" onClick={() => setOpen(false)} className="mt-2 inline-flex h-10 items-center justify-center rounded-full bg-primary px-5 text-sm font-medium text-primary-foreground">
+              Book a Free Call
+            </a>
           </div>
         </div>
       )}

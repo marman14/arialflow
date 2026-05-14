@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/Layout";
 import { ReviewsMarquee } from "@/components/site/ReviewsMarquee";
+import { AIVoiceDemo } from "@/components/site/AIVoiceDemo";
 import heroImg from "@/assets/hero-contractor.jpg";
 import {
   PhoneCall, MessageSquare, Star, Repeat, Globe, Megaphone,
@@ -217,8 +218,15 @@ function HomePage() {
       {/* Case Studies */}
       <section className="border-t border-border/60 bg-surface/30">
         <div className="mx-auto max-w-7xl px-5 py-24 md:px-8">
-          <p className="text-xs uppercase tracking-widest text-primary">Receipts</p>
-          <h2 className="mt-3 max-w-2xl text-4xl md:text-5xl">Real numbers from real contractors.</h2>
+          <div className="flex flex-wrap items-end justify-between gap-6">
+            <div className="max-w-xl">
+              <p className="text-xs uppercase tracking-widest text-primary">Receipts</p>
+              <h2 className="mt-3 text-4xl md:text-5xl">Real numbers from real contractors.</h2>
+            </div>
+            <Link to="/case-studies" className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline">
+              See full case studies <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
           <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             {cases.map((c) => (
               <article key={c.who} className="rounded-2xl border border-border/60 bg-surface-elevated p-6">
@@ -232,6 +240,9 @@ function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* AI Voice Demo */}
+      <AIVoiceDemo />
 
       {/* Reviews Marquee */}
       <ReviewsMarquee />
