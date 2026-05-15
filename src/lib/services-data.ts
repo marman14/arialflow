@@ -25,7 +25,7 @@ export const SERVICES: Service[] = [
     title: "AI Calling Agent",
     short: "Never miss a call again — even at 2 am.",
     hero: "Your phone rings. Nobody's at the desk. Our AI picks up, qualifies the caller, and books the job into your calendar. Every single time.",
-    longDescription: "Most contractors miss 3–4 calls a day when the crew is on a job site. Every missed call is a customer who will call your competitor instead. Our AI Calling Agent answers every single call within 1 ring, 24 hours a day, 7 days a week — holidays included. It sounds like a real person, knows your services, your service area, and your availability. It books qualified appointments directly into your calendar so you wake up to a full schedule.",
+    longDescription: "Most businesses miss 3–4 calls a day when the crew is on a job site. Every missed call is a customer who will call your competitor instead. Our AI Calling Agent answers every single call within 1 ring, 24 hours a day, 7 days a week — holidays included. It sounds like a real person, knows your services, your service area, and your availability. It books qualified appointments directly into your calendar so you wake up to a full schedule.",
     benefits: [
       "Every call answered in 1 ring, day or night",
       "Jobs booked straight into your calendar",
@@ -105,7 +105,7 @@ export const SERVICES: Service[] = [
     title: "Review Engine",
     short: "Get 40+ new Google reviews every month on autopilot.",
     hero: "After every job, our system sends your customer a friendly text asking for a review. No awkward conversations. No forgetting. Just 5-star reviews rolling in.",
-    longDescription: "Google reviews are the #1 factor in whether a homeowner calls you or your competitor. But asking for reviews is awkward and easy to forget. Our Review Engine sends a friendly SMS 2 hours after every completed job — when the customer is happiest. If they're unhappy, the feedback comes to you privately first, so you can fix the issue before it hits Google. Most of our contractors go from a handful of reviews to 40+ new ones per month.",
+    longDescription: "Google reviews are the #1 factor in whether a homeowner calls you or your competitor. But asking for reviews is awkward and easy to forget. Our Review Engine sends a friendly SMS 2 hours after every completed job — when the customer is happiest. If they're unhappy, the feedback comes to you privately first, so you can fix the issue before it hits Google. Most of our businesses go from a handful of reviews to 40+ new ones per month.",
     benefits: [
       "Automatic SMS after every completed job",
       "Unhappy customers routed to you privately first",
@@ -144,7 +144,7 @@ export const SERVICES: Service[] = [
     icon: Repeat,
     title: "Lead Follow-Up",
     short: "Automated texts and emails so no lead goes cold.",
-    hero: "80% of leads buy between the 5th and 12th contact. We make sure you're still in the conversation long after most contractors have given up.",
+    hero: "80% of leads buy between the 5th and 12th contact. We make sure you're still in the conversation long after most businesses have given up.",
     longDescription: "You get a lead from your website or a referral. You call once, maybe twice. They don't pick up. You move on. But that lead isn't gone — they're just busy. Our automated follow-up system sends personalized texts and emails over days and weeks so you stay top-of-mind. When that homeowner is finally ready, you're the one they call — not the competitor who never followed up.",
     benefits: [
       "Personalized SMS + email sequences",
@@ -168,7 +168,7 @@ export const SERVICES: Service[] = [
     faq: [
       { q: "Will customers feel spammed?", a: "No. Sequences pause the moment someone replies, books, or opts out." },
       { q: "Do you write the messages?", a: "Yes — we draft everything, you approve, we send." },
-      { q: "How many more jobs will this get me?", a: "On average, contractors see a 30–50% lift in bookings from follow-up alone." },
+      { q: "How many more jobs will this get me?", a: "On average, businesses see a 30–50% lift in bookings from follow-up alone." },
     ],
     stat: { k: "30–50%", v: "More bookings" },
     caseStudy: {
@@ -185,7 +185,7 @@ export const SERVICES: Service[] = [
     title: "Local SEO & Social",
     short: "Show up first when homeowners Google your trade.",
     hero: "When someone searches \"AC repair near me\" or \"roofer in Dallas\", you want to be in the top 3 on Google Maps. We make that happen.",
-    longDescription: "Most homeowners pick a contractor from the Google Map Pack — those 3 businesses that show up at the top of a local search. If you're not in that top 3, you're invisible. Our team optimizes your Google Business Profile every week, cleans up your online listings, posts content on your social media, and builds local links — all done for you. No technical knowledge required on your end.",
+    longDescription: "Most homeowners pick a business from the Google Map Pack — those 3 businesses that show up at the top of a local search. If you're not in that top 3, you're invisible. Our team optimizes your Google Business Profile every week, cleans up your online listings, posts content on your social media, and builds local links — all done for you. No technical knowledge required on your end.",
     benefits: [
       "Google Business Profile optimized weekly",
       "Show up in the Map Pack for your services",
@@ -225,7 +225,7 @@ export const SERVICES: Service[] = [
     title: "Conversion Website",
     short: "A fast, mobile-first website built to get you calls.",
     hero: "Not just a pretty website — a website engineered to turn visitors into booked jobs. Live in 5–7 business days.",
-    longDescription: "Most contractor websites are slow, outdated, and don't convert visitors into calls. We build you a fast, mobile-first website designed specifically for your trade. Click-to-call buttons are everywhere. Your services, service area, and reviews are front and center. And because it scores 95+ on Google's speed test, you'll rank higher in search results. It's included free with any of our plans.",
+    longDescription: "Most business websites are slow, outdated, and don't convert visitors into calls. We build you a fast, mobile-first website designed specifically for your trade. Click-to-call buttons are everywhere. Your services, service area, and reviews are front and center. And because it scores 95+ on Google's speed test, you'll rank higher in search results. It's included free with any of our plans.",
     benefits: [
       "Designed specifically for your trade",
       "Mobile-first — looks great on any phone",
@@ -265,7 +265,7 @@ export const SERVICES: Service[] = [
     title: "Paid Ads",
     short: "Google & Meta ads that bring in real, booked jobs.",
     hero: "Every ad dollar tracked to a booked job. We run Google and Meta ads targeting homeowners who are ready to buy — right now, in your service area.",
-    longDescription: "Running ads without a system is like pouring water into a bucket with holes. We set up and manage your Google Local Service Ads, Google Search campaigns, and Meta retargeting — all targeting homeowners in your exact service area who need your services right now. Every dollar is tracked to a booked job so you know exactly what's working. On average, our contractors see 8–12× return on ad spend.",
+    longDescription: "Running ads without a system is like pouring water into a bucket with holes. We set up and manage your Google Local Service Ads, Google Search campaigns, and Meta retargeting — all targeting homeowners in your exact service area who need your services right now. Every dollar is tracked to a booked job so you know exactly what's working. On average, our businesses see 8–12× return on ad spend.",
     benefits: [
       "Google Local Service Ads (the badged ones)",
       "Google Search ads by service and city",
@@ -286,8 +286,8 @@ export const SERVICES: Service[] = [
       { title: "Call tracking + ROI", desc: "Every booked job tied to its ad source so you know what's working." },
     ],
     faq: [
-      { q: "How much should I spend on ads?", a: "Most contractors start with $1,500–$3,000/month. We scale only when results prove out." },
-      { q: "How fast will I see results?", a: "Most contractors see qualified leads within the first week of launching campaigns." },
+      { q: "How much should I spend on ads?", a: "Most businesses start with $1,500–$3,000/month. We scale only when results prove out." },
+      { q: "How fast will I see results?", a: "Most businesses see qualified leads within the first week of launching campaigns." },
       { q: "Do you handle everything?", a: "Yes — setup, copywriting, targeting, optimization, and reporting. All you do is answer the phone." },
     ],
     stat: { k: "8–12×", v: "Return on ad spend" },
@@ -305,7 +305,7 @@ export const SERVICES: Service[] = [
     title: "Service-Area Domination",
     short: "Own your entire metro — not just your zip code.",
     hero: "When you're #1 in 12 cities at once, no one can compete with your phone volume. We build the playbook to make that happen.",
-    longDescription: "Most contractors only show up in Google for their home city. But your service area covers 10, 15, maybe 20 cities. Our Service-Area Domination program builds SEO-optimized pages for every city you serve, manages additional Google Business profiles where eligible, and builds a review moat so competitors can't catch up. The result? Your phone rings from every corner of your metro.",
+    longDescription: "Most businesses only show up in Google for their home city. But your service area covers 10, 15, maybe 20 cities. Our Service-Area Domination program builds SEO-optimized pages for every city you serve, manages additional Google Business profiles where eligible, and builds a review moat so competitors can't catch up. The result? Your phone rings from every corner of your metro.",
     benefits: [
       "SEO pages for every city you serve",
       "Show up on Google Maps across the metro",
@@ -328,7 +328,7 @@ export const SERVICES: Service[] = [
     faq: [
       { q: "How long until I see results?", a: "Realistic timeline: 6–12 months to dominate most service areas in a mid-size metro." },
       { q: "Is this different from regular SEO?", a: "Yes — this is a comprehensive, multi-city strategy designed to own an entire region, not just one keyword." },
-      { q: "Do I need to be established already?", a: "It works best for contractors with some reviews and a track record, but we can start building from any level." },
+      { q: "Do I need to be established already?", a: "It works best for businesses with some reviews and a track record, but we can start building from any level." },
     ],
     stat: { k: "12+", v: "Cities targeted" },
     caseStudy: {
@@ -346,7 +346,7 @@ export const PACKAGES = [
     slug: "starter",
     name: "Starter",
     tagline: "Stop missing calls. Start collecting reviews.",
-    summary: "The two highest-ROI tools for any contractor. Plug the worst leaks first.",
+    summary: "The two highest-ROI tools for any business. Plug the worst leaks first.",
     includes: ["AI Calling Agent (24/7)", "Review Engine (40+ reviews/mo)", "Conversion Website", "Founder access via WhatsApp"],
     bestFor: "Small crews and owner-operators.",
   },
@@ -362,7 +362,7 @@ export const PACKAGES = [
       "Local SEO & weekly social",
       "Monthly strategy call",
     ],
-    bestFor: "Established contractors ready to scale.",
+    bestFor: "Established businesses ready to scale.",
   },
   {
     slug: "done-for-you",

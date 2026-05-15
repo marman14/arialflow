@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/Layout";
 import { ReviewsMarquee } from "@/components/site/ReviewsMarquee";
 import { AIVoiceDemo } from "@/components/site/AIVoiceDemo";
-import heroImg from "@/assets/hero-contractor.jpg";
+import heroImg from "@/assets/hero-business.jpg";
 import {
   PhoneCall, MessageSquare, Star, Repeat, Globe, Megaphone,
   ArrowRight, Check, TrendingUp, Clock, ShieldCheck, Calendar,
@@ -12,8 +12,8 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Arialflow — More calls. More jobs. More revenue, on autopilot." },
-      { name: "description", content: "AI growth systems for HVAC, roofing & plumbing contractors in Texas & Florida. Capture every call, follow up every lead, win 5-star reviews — without leaving the job site." },
-      { property: "og:title", content: "Arialflow — AI Growth for Contractors" },
+      { name: "description", content: "AI growth systems for local businesses globally. Capture every call, follow up every lead, win 5-star reviews — without leaving the job site." },
+      { property: "og:title", content: "Arialflow — AI Growth for Local Businesses" },
       { property: "og:description", content: "Capture every call, follow up every lead, win 5-star reviews — without leaving the job site." },
     ],
   }),
@@ -27,7 +27,7 @@ const services = [
   { icon: MessageSquare, title: "AI Chatbot", desc: "Replies on your site & Facebook in under 5 seconds with the right answer.", stat: "5-second response" },
   { icon: Star, title: "Reviews on Autopilot", desc: "SMS review requests after every job. Reactivate dormant customers.", stat: "+40 reviews / month" },
   { icon: Repeat, title: "Lead Follow-Up", desc: "Personalized SMS + email nurtures so leads never go cold again.", stat: "30–50% more bookings" },
-  { icon: Globe, title: "Conversion Website", desc: "Fast, mobile, Google-optimized contractor site. Built to book jobs.", stat: "Live in 5–7 days" },
+  { icon: Globe, title: "Conversion Website", desc: "Fast, mobile, Google-optimized business site. Built to book jobs.", stat: "Live in 5–7 days" },
   { icon: Megaphone, title: "Paid Ads", desc: "Google & Meta ads targeting homeowners ready to buy in your service area.", stat: "8–12× ROAS" },
 ];
 
@@ -56,14 +56,14 @@ function HomePage() {
           <div className="md:col-span-7">
             <div className="inline-flex items-center gap-2 rounded-full border border-border/60 bg-surface/60 px-3 py-1 text-xs text-muted-foreground">
               <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-primary" />
-              Trusted by 80+ contractors across Texas & Florida
+              Trusted by 80+ businesses globally
             </div>
             <h1 className="mt-6 text-5xl leading-[1.02] md:text-7xl">
               More calls. More jobs.<br />
               <span className="text-gradient-ember">More revenue</span>, on autopilot.
             </h1>
             <p className="mt-6 max-w-xl text-lg text-muted-foreground">
-              Arialflow plugs the leaks in your contractor business — missed calls, slow follow-up, lost reviews — with a single AI growth system. You stay on the job site. We bring the work.
+              Arialflow plugs the leaks in your business — missed calls, slow follow-up, lost reviews — with a single AI growth system. You stay on the job site. We bring the work.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <a href={CALENDLY} target="_blank" rel="noreferrer" className="group inline-flex h-12 items-center gap-2 rounded-full bg-primary px-6 text-sm font-medium text-primary-foreground ring-ember transition-transform hover:-translate-y-0.5">
@@ -77,7 +77,7 @@ function HomePage() {
             <dl className="mt-12 grid max-w-lg grid-cols-3 gap-6 border-t border-border pt-8">
               {[
                 { k: "4.9★", v: "Avg client rating" },
-                { k: "80+", v: "Active contractors" },
+                { k: "80+", v: "Active businesses" },
                 { k: "<5s", v: "Lead response" },
               ].map((s) => (
                 <div key={s.v}>
@@ -91,7 +91,7 @@ function HomePage() {
             <div className="relative">
               <div className="absolute -inset-6 -z-10 rounded-[2rem] bg-primary/10 blur-2xl" />
               <div className="overflow-hidden rounded-[1.75rem] border border-border/60">
-                <img src={heroImg} alt="HVAC contractor at golden hour" width={1600} height={1200} className="h-full w-full object-cover" />
+                <img src={heroImg} alt="HVAC business at golden hour" width={1600} height={1200} className="h-full w-full object-cover" />
               </div>
               <div className="glass absolute -bottom-6 -left-6 hidden w-72 rounded-2xl p-4 md:block">
                 <div className="flex items-center gap-3">
@@ -127,7 +127,7 @@ function HomePage() {
             <p className="text-xs uppercase tracking-widest text-primary">The honest math</p>
             <h2 className="mt-3 text-4xl md:text-5xl">Every missed call is a job your competitor just booked.</h2>
             <p className="mt-5 text-muted-foreground">
-              The average contractor misses 38% of inbound calls during peak hours. Of those leads, 80% never call back — they call the next name on Google. That's not a marketing problem. That's a response problem.
+              The average business misses 38% of inbound calls during peak hours. Of those leads, 80% never call back — they call the next name on Google. That's not a marketing problem. That's a response problem.
             </p>
             <a href={CALENDLY} target="_blank" rel="noreferrer" className="mt-6 inline-flex h-11 items-center gap-2 rounded-full bg-primary px-5 text-sm font-medium text-primary-foreground">
               <Calendar className="h-4 w-4" /> Get your free audit <ArrowRight className="h-4 w-4" />
@@ -221,7 +221,7 @@ function HomePage() {
           <div className="flex flex-wrap items-end justify-between gap-6">
             <div className="max-w-xl">
               <p className="text-xs uppercase tracking-widest text-primary">Receipts</p>
-              <h2 className="mt-3 text-4xl md:text-5xl">Real numbers from real contractors.</h2>
+              <h2 className="mt-3 text-4xl md:text-5xl">Real numbers from Real businesses.</h2>
             </div>
             <Link to="/case-studies" className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline">
               See full case studies <ArrowRight className="h-4 w-4" />
@@ -254,7 +254,7 @@ function HomePage() {
             <p className="text-xs uppercase tracking-widest text-primary">Why Arialflow</p>
             <h2 className="mt-3 text-4xl md:text-5xl">A partner — not a login.</h2>
             <p className="mt-5 text-muted-foreground">
-              Buying AI software is easy. Making it actually drive booked jobs for a local contractor is hard. We deploy, tune, and optimize the system for your trade — and stick around to make sure it works.
+              Buying AI software is easy. Making it actually drive booked jobs for a local business is hard. We deploy, tune, and optimize the system for your trade — and stick around to make sure it works.
             </p>
           </div>
           <ul className="grid gap-4">

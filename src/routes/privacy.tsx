@@ -23,7 +23,7 @@ function PrivacyPage() {
           <section>
             <h2 className="text-xl font-semibold text-foreground">1. Who We Are</h2>
             <p className="mt-3">
-              Arialflow is a companion company of <strong className="text-foreground">AR Webcrafts</strong>. We provide AI-powered marketing and growth solutions for home service contractors. This Privacy Policy explains how we collect, use, and protect your personal information when you use our website and services.
+              Arialflow is a companion company of <strong className="text-foreground">AR Webcrafts</strong>. We provide AI-powered marketing and growth solutions for local businesses. This Privacy Policy explains how we collect, use, and protect your personal information when you use our website and services.
             </p>
           </section>
 

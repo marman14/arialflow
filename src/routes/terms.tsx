@@ -23,7 +23,7 @@ function TermsPage() {
           <section>
             <h2 className="text-xl font-semibold text-foreground">1. About Arialflow</h2>
             <p className="mt-3">
-              Arialflow is a companion company of <strong className="text-foreground">AR Webcrafts</strong>. By using our website and services, you agree to these Terms of Service. Arialflow operates under the umbrella of AR Webcrafts and provides AI-powered growth solutions specifically designed for home service contractors including HVAC, roofing, plumbing, electrical, and solar businesses.
+              Arialflow is a companion company of <strong className="text-foreground">AR Webcrafts</strong>. By using our website and services, you agree to these Terms of Service. Arialflow operates under the umbrella of AR Webcrafts and provides AI-powered growth solutions specifically designed for local businesses including local businesses.
             </p>
           </section>
 

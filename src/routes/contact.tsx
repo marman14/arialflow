@@ -93,7 +93,7 @@ function ContactPage() {
               ))}
               <div className="rounded-2xl border border-border/60 bg-background p-5 text-sm text-muted-foreground">
                 <p className="font-medium text-foreground">Serving</p>
-                <p className="mt-2">HVAC, Roofing, Plumbing, Electrical & Solar contractors across Texas and Florida.</p>
+                <p className="mt-2">Local businesses globally.</p>
               </div>
             </aside>
 

@@ -5,8 +5,8 @@ import { ArrowRight, Check, Sparkles, Shield, Zap, Calendar } from "lucide-react
 export const Route = createFileRoute("/investment")({
   head: () => ({
     meta: [
-      { title: "Investment — Arialflow Growth Plans for Contractors" },
-      { name: "description", content: "Growth plans for HVAC, roofing, and plumbing businesses in Texas and Florida. Book a call to find the right fit." },
+      { title: "Investment — Arialflow Growth Plans for Local Businesses" },
+      { name: "description", content: "Growth plans for local businesses globally. Book a call to find the right fit." },
       { property: "og:title", content: "Arialflow Investment" },
       { property: "og:description", content: "Growth plans built for the trades." },
     ],
@@ -29,7 +29,7 @@ const plans = [
       "Call recordings & lead summaries sent to your phone",
       "Direct WhatsApp access to your account manager",
     ],
-    bestFor: "Contractors doing $250K–$1M/yr who want to stop the bleeding.",
+    bestFor: "businesses doing $250K–$1M/yr who want to stop the bleeding.",
     highlight: false,
   },
   {
@@ -47,7 +47,7 @@ const plans = [
       "Social Media — branded posts on Facebook & Instagram",
       "Monthly strategy call with your account manager",
     ],
-    bestFor: "Contractors doing $1M–$5M/yr who are ready to compound growth.",
+    bestFor: "businesses doing $1M–$5M/yr who are ready to compound growth.",
     highlight: true,
   },
   {
@@ -56,7 +56,7 @@ const plans = [
     price: "$2,497",
     period: "/mo",
     tagline: "We run it all. You run the trucks.",
-    description: "The complete Arialflow operating system. We manage every channel, every campaign, every metric. You focus on delivering great work — we deliver the customers. This is the plan our highest-revenue contractors are on.",
+    description: "The complete Arialflow operating system. We manage every channel, every campaign, every metric. You focus on delivering great work — we deliver the customers. This is the plan our highest-revenue businesses are on.",
     includes: [
       "Everything in Growth",
       "Paid Ads — Google Local Service Ads, Search & Meta",
@@ -316,7 +316,7 @@ function InvestmentPage() {
           <dl className="mt-8 space-y-4">
             {[
               { q: "Can I switch plans later?", a: "Yes. You can upgrade or downgrade at any time. Changes take effect on your next billing cycle." },
-              { q: "How fast will I see results?", a: "Most contractors see their first AI-booked appointment within the first week. Review growth and SEO ranking improvements build over 30–90 days." },
+              { q: "How fast will I see results?", a: "Most businesses see their first AI-booked appointment within the first week. Review growth and SEO ranking improvements build over 30–90 days." },
               { q: "Do I need to be tech-savvy?", a: "Not at all. We set everything up and manage it for you. All you need is your phone." },
               { q: "What happens on the call?", a: "We'll ask about your business, your service area, and where you're losing jobs. Then we'll recommend the best plan and walk you through exactly what to expect." },
             ].map((f) => (

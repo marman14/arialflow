@@ -7,9 +7,9 @@ export const Route = createFileRoute("/services/")({
   head: () => ({
     meta: [
       { title: "Our Services — Arialflow" },
-      { name: "description", content: "AI calling, chatbots, review automation, lead nurturing, websites, paid ads and local SEO — built for HVAC, roofing and plumbing companies." },
+      { name: "description", content: "AI calling, chatbots, review automation, lead nurturing, websites, paid ads and local SEO — built for local businesses." },
       { property: "og:title", content: "Arialflow Services" },
-      { property: "og:description", content: "The complete AI growth suite for contractors." },
+      { property: "og:description", content: "The complete AI growth suite for Local Businesses." },
     ],
   }),
   component: ServicesPage,

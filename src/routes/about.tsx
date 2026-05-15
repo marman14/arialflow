@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Arialflow, the AI growth partner for contractors" },
+      { title: "About — Arialflow, the AI growth partner for businesses" },
       { name: "description", content: "Founder-led. Trade-specialized. Direct access, transparent pricing, and month-to-month plans — that's how Arialflow does business." },
       { property: "og:title", content: "About Arialflow" },
       { property: "og:description", content: "Founder-led. Trade-specialized. Built for the field." },
@@ -35,7 +35,7 @@ function AboutPage() {
       <section className="mx-auto max-w-7xl px-5 py-20 md:px-8">
         <div className="grid gap-12 md:grid-cols-12">
           <div className="md:col-span-7 space-y-5 text-lg leading-relaxed text-muted-foreground">
-            <p>Arialflow started with a simple observation: the best contractors in America are losing jobs to worse contractors with better follow-up.</p>
+            <p>Arialflow started with a simple observation: the best businesses in America are losing jobs to worse businesses with better follow-up.</p>
             <p>Our founder Arman spent two years inside HVAC and roofing companies watching the same pattern repeat — calls going to voicemail at 4pm, leads cooling overnight, happy customers never asked for a review. Every leak was a few thousand dollars walking out the door.</p>
             <p>We built Arialflow to close those leaks. Not with another dashboard you'll never log into, but with an AI system that runs in the background and a real human who answers when you have questions.</p>
             <p className="text-foreground">If your phone is ringing more than your competitors' but your bank account doesn't show it — we should talk.</p>

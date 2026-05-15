@@ -19,7 +19,7 @@ function getResponse(input: string): Message {
   if (q.includes("service") || q.includes("offer") || q.includes("what do you do")) {
     return {
       role: "bot",
-      text: "We help HVAC, roofing, and plumbing contractors grow with AI-powered tools:\n\n• AI Calling Agent — answers every call 24/7\n• AI Chatbot — replies on your website & social\n• Review Engine — 40+ Google reviews per month\n• Lead Follow-Up — automated SMS & email\n• Local SEO & Social — rank in the Map Pack\n• Conversion Website — built for your trade\n• Paid Ads — Google & Meta, fully managed\n\nWant to learn more about any of these?",
+      text: "We help HVAC, roofing, and plumbing businesses grow with AI-powered tools:\n\n• AI Calling Agent — answers every call 24/7\n• AI Chatbot — replies on your website & social\n• Review Engine — 40+ Google reviews per month\n• Lead Follow-Up — automated SMS & email\n• Local SEO & Social — rank in the Map Pack\n• Conversion Website — built for your trade\n• Paid Ads — Google & Meta, fully managed\n\nWant to learn more about any of these?",
       options: ["Tell me about AI Calling", "How much does it cost?", "Book a free call"],
     };
   }
@@ -35,7 +35,7 @@ function getResponse(input: string): Message {
   if (q.includes("review") || q.includes("google review") || q.includes("star")) {
     return {
       role: "bot",
-      text: "Our Review Engine sends a friendly SMS to your customers 2 hours after every completed job — when satisfaction is highest.\n\nHappy customers get a direct link to your Google page. Unhappy ones are routed to you privately first, so you can fix the issue before it hits Google.\n\nMost of our contractors go from a handful of reviews to 40+ new 5-star reviews per month!",
+      text: "Our Review Engine sends a friendly SMS to your customers 2 hours after every completed job — when satisfaction is highest.\n\nHappy customers get a direct link to your Google page. Unhappy ones are routed to you privately first, so you can fix the issue before it hits Google.\n\nMost of our businesses go from a handful of reviews to 40+ new 5-star reviews per month!",
       options: ["Book a free call", "What other services do you offer?"],
     };
   }
@@ -67,7 +67,7 @@ function getResponse(input: string): Message {
   if (q.includes("follow") || q.includes("lead") || q.includes("sms") || q.includes("email") || q.includes("nurture")) {
     return {
       role: "bot",
-      text: "80% of leads buy between the 5th and 12th contact. Our Lead Follow-Up system sends personalized texts and emails over days and weeks so you stay top-of-mind.\n\nWhen a lead is ready, they book — and you get an instant alert. Most contractors see a 30-50% lift in bookings from follow-up alone!",
+      text: "80% of leads buy between the 5th and 12th contact. Our Lead Follow-Up system sends personalized texts and emails over days and weeks so you stay top-of-mind.\n\nWhen a lead is ready, they book — and you get an instant alert. Most businesses see a 30-50% lift in bookings from follow-up alone!",
       options: ["Book a free call", "What other services do you offer?"],
     };
   }
@@ -75,7 +75,7 @@ function getResponse(input: string): Message {
   if (q.includes("seo") || q.includes("google") || q.includes("map") || q.includes("rank")) {
     return {
       role: "bot",
-      text: "We manage your Google Business Profile weekly, clean up your online listings across 60+ directories, post branded content on your social media, and build local links.\n\nThe goal? Get you into the top 3 on Google Maps for your services in your area. Most contractors see movement in 30-60 days.",
+      text: "We manage your Google Business Profile weekly, clean up your online listings across 60+ directories, post branded content on your social media, and build local links.\n\nThe goal? Get you into the top 3 on Google Maps for your services in your area. Most businesses see movement in 30-60 days.",
       options: ["Book a free call", "Tell me about paid ads"],
     };
   }
@@ -83,7 +83,7 @@ function getResponse(input: string): Message {
   if (q.includes("ad") || q.includes("paid") || q.includes("google ad") || q.includes("meta") || q.includes("facebook ad")) {
     return {
       role: "bot",
-      text: "We run Google Local Service Ads, Google Search campaigns, and Meta retargeting — all targeting homeowners in your service area who need your services right now.\n\nEvery dollar is tracked to a booked job. Our contractors average 8-12× return on ad spend!",
+      text: "We run Google Local Service Ads, Google Search campaigns, and Meta retargeting — all targeting homeowners in your service area who need your services right now.\n\nEvery dollar is tracked to a booked job. Our businesses average 8-12× return on ad spend!",
       options: ["Book a free call", "How much does it cost?"],
     };
   }
@@ -107,7 +107,7 @@ function getResponse(input: string): Message {
   if (q.includes("hi") || q.includes("hello") || q.includes("hey") || q.includes("yo")) {
     return {
       role: "bot",
-      text: "Hey there! 👋 Welcome to Arialflow. We help contractors like you capture more calls, get more reviews, and book more jobs — all on autopilot.\n\nWhat can I help you with today?",
+      text: "Hey there! 👋 Welcome to Arialflow. We help businesses like you capture more calls, get more reviews, and book more jobs — all on autopilot.\n\nWhat can I help you with today?",
       options: ["What services do you offer?", "How much does it cost?", "Book a free call"],
     };
   }
@@ -125,7 +125,7 @@ export function Chatbot() {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: "bot",
-      text: "Hey! 👋 I'm the Arialflow assistant. I can answer questions about our services, pricing, and how we help contractors grow.\n\nWhat can I help you with?",
+      text: "Hey! 👋 I'm the Arialflow assistant. I can answer questions about our services, pricing, and how we help businesses grow.\n\nWhat can I help you with?",
       options: quickReplies,
     },
   ]);

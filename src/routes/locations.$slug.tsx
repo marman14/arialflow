@@ -6,7 +6,7 @@ import { MapPin, ArrowRight, Check, ArrowLeft } from "lucide-react";
 export const Route = createFileRoute("/locations/$slug")({
   head: ({ params }) => {
     const loc = LOCATIONS.find((x) => x.slug === params.slug);
-    const title = loc ? `AI Growth for Contractors in ${loc.city}, ${loc.state} — Arialflow` : "Location — Arialflow";
+    const title = loc ? `AI Growth for Local Businesses in ${loc.city}, ${loc.state} — Arialflow` : "Location — Arialflow";
     const desc = loc?.description ?? "Arialflow service area detail.";
     return {
       meta: [
@@ -71,8 +71,8 @@ function LocationDetail() {
                 <p className="text-xs uppercase tracking-widest text-muted-foreground">Results in {loc.city}</p>
                 <div className="mt-6 space-y-4">
                   <div>
-                    <p className="font-display text-3xl text-gradient-ember">{loc.stats.contractorsHelped}</p>
-                    <p className="text-sm">Contractors Helped</p>
+                    <p className="font-display text-3xl text-gradient-ember">{loc.stats.businessesHelped}</p>
+                    <p className="text-sm">businesses Helped</p>
                   </div>
                   <div>
                     <p className="font-display text-3xl text-gradient-ember">{loc.stats.avgRoas}</p>

@@ -5,7 +5,7 @@ export type LocationData = {
   hero: string;
   description: string;
   stats: {
-    contractorsHelped: string;
+    businessesHelped: string;
     avgRoas: string;
     reviewsGenerated: string;
   };
@@ -18,10 +18,10 @@ export const LOCATIONS: LocationData[] = [
     slug: "dallas-tx",
     city: "Dallas",
     state: "TX",
-    hero: "Dallas' Premier AI Growth Partner for Contractors",
+    hero: "Dallas' Premier AI Growth Partner for Local Businesses",
     description: "We help HVAC, roofing, and plumbing businesses in the DFW metroplex stop missing calls and start booking more jobs on autopilot.",
     stats: {
-      contractorsHelped: "45+",
+      businessesHelped: "45+",
       avgRoas: "9x",
       reviewsGenerated: "1,200+",
     },
@@ -31,7 +31,7 @@ export const LOCATIONS: LocationData[] = [
       { title: "Automated Review Generation", desc: "Turn every happy Dallas customer into a 5-star Google review." },
     ],
     faq: [
-      { q: "Do you only work with Dallas contractors?", a: "No, we work nationwide, but Dallas is one of our primary markets with proven results for local trades." },
+      { q: "Do you only work with Dallas businesses?", a: "No, we work nationwide, but Dallas is one of our primary markets with proven results for local trades." },
       { q: "How long until I rank in Dallas?", a: "The DFW market is highly competitive. Map pack movement usually starts in 30-60 days, with solid positioning in 3-6 months." },
     ]
   },
@@ -40,9 +40,9 @@ export const LOCATIONS: LocationData[] = [
     city: "Tampa",
     state: "FL",
     hero: "Tampa's Trusted AI Growth System for the Trades",
-    description: "Helping Tampa Bay area contractors capture every lead, respond in seconds, and dominate local search rankings.",
+    description: "Helping Tampa Bay area businesses capture every lead, respond in seconds, and dominate local search rankings.",
     stats: {
-      contractorsHelped: "30+",
+      businessesHelped: "30+",
       avgRoas: "11x",
       reviewsGenerated: "850+",
     },
@@ -63,12 +63,12 @@ export const LOCATIONS: LocationData[] = [
     hero: "Scale Your Houston Contracting Business with AI",
     description: "From Katy to Sugar Land, we build the systems that help Houston trades businesses book more jobs and get more 5-star reviews.",
     stats: {
-      contractorsHelped: "50+",
+      businessesHelped: "50+",
       avgRoas: "10x",
       reviewsGenerated: "1,500+",
     },
     services: [
-      { title: "Houston Area SEO", desc: "Be the first contractor they see in the massive Houston market." },
+      { title: "Houston Area SEO", desc: "Be the first business they see in the massive Houston market." },
       { title: "Bilingual AI Agents", desc: "Capture both English and Spanish speaking leads effectively." },
       { title: "Lead Nurturing", desc: "Keep your pipeline full year-round with automated follow-ups." },
     ],

@@ -48,7 +48,7 @@ export function ReviewsMarquee() {
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div className="max-w-xl">
-            <p className="text-xs uppercase tracking-widest text-primary">What contractors say</p>
+            <p className="text-xs uppercase tracking-widest text-primary">What businesses say</p>
             <h2 className="mt-3 text-4xl md:text-5xl">5.0 from owners who stopped chasing leads.</h2>
           </div>
           <div className="flex items-center gap-2 text-amber-300">

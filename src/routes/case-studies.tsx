@@ -5,10 +5,10 @@ import { ArrowRight, Calendar, TrendingUp, Check, Star, MapPin, Clock, Users } f
 export const Route = createFileRoute("/case-studies")({
   head: () => ({
     meta: [
-      { title: "Case Studies — Arialflow Results for Real Contractors" },
-      { name: "description", content: "See how HVAC, roofing, and plumbing contractors in Texas and Florida are using Arialflow to book more jobs, get more reviews, and grow revenue." },
+      { title: "Case Studies — Arialflow Results for Real businesses" },
+      { name: "description", content: "See how local businesses globally are using Arialflow to book more jobs, get more reviews, and grow revenue." },
       { property: "og:title", content: "Arialflow Case Studies" },
-      { property: "og:description", content: "Real results from real contractors." },
+      { property: "og:description", content: "Real results from Real businesses." },
     ],
   }),
   component: CaseStudiesPage,
@@ -173,10 +173,10 @@ function CaseStudiesPage() {
         <div className="relative mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28">
           <p className="text-xs uppercase tracking-widest text-primary">Case Studies</p>
           <h1 className="mt-3 max-w-3xl text-5xl md:text-6xl">
-            Real contractors. <span className="text-gradient-ember">Real results.</span>
+            Real businesses. <span className="text-gradient-ember">Real results.</span>
           </h1>
           <p className="mt-5 max-w-2xl text-lg text-muted-foreground">
-            Don't take our word for it. Here's exactly what happened when these contractors plugged in Arialflow — every number verified, every result documented.
+            Don't take our word for it. Here's exactly what happened when these businesses plugged in Arialflow — every number verified, every result documented.
           </p>
           <a href={CALENDLY} target="_blank" rel="noreferrer" className="mt-7 inline-flex h-12 items-center gap-2 rounded-full bg-primary px-6 text-sm font-medium text-primary-foreground">
             <Calendar className="h-4 w-4" /> Want results like these? Book a call <ArrowRight className="h-4 w-4" />
@@ -273,7 +273,7 @@ function CaseStudiesPage() {
           <div className="relative max-w-2xl">
             <h2 className="text-4xl md:text-5xl">Want to be the next case study?</h2>
             <p className="mt-4 text-muted-foreground">
-              Book a free 30-minute call. We'll look at your business and show you exactly what kind of results you can expect — based on real data from contractors just like you.
+              Book a free 30-minute call. We'll look at your business and show you exactly what kind of results you can expect — based on real data from businesses just like you.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a href={CALENDLY} target="_blank" rel="noreferrer" className="inline-flex h-12 items-center gap-2 rounded-full bg-primary px-6 text-sm font-medium text-primary-foreground ring-ember">

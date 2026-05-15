@@ -13,7 +13,7 @@ export function Footer() {
             <span className="font-display text-lg font-semibold text-espresso-foreground">Arialflow</span>
           </div>
           <p className="mt-4 max-w-sm text-sm text-muted-foreground">
-            AI-powered growth systems for HVAC contractors, roofers & plumbers across Texas and Florida. We help you capture every lead, get more reviews, and book more jobs — without the manual work.
+            AI-powered growth systems for local businesses globally. We help you capture every lead, get more reviews, and book more jobs — without the manual work.
           </p>
           <div className="mt-5 space-y-1.5 text-sm text-espresso-foreground">
             <div className="flex items-center gap-2">
@@ -56,7 +56,7 @@ export function Footer() {
             <li><span className="block text-espresso-foreground">WhatsApp</span><a href="https://wa.me/+13072784862" className="hover:text-espresso-foreground" target="_blank" rel="noreferrer">+1 (307) 278-4862</a></li>
             <li><span className="block text-espresso-foreground">Email</span>contact@arialflow.com</li>
             <li><span className="block text-espresso-foreground">Hours</span>Mon–Fri · 8am–7pm CT</li>
-            <li><span className="block text-espresso-foreground">Serving</span>Texas & Florida, USA</li>
+            <li><span className="block text-espresso-foreground">Serving</span>Global</li>
           </ul>
         </div>
       </div>
