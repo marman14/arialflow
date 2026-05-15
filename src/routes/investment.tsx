@@ -71,6 +71,63 @@ const plans = [
   },
 ];
 
+const plansV2 = [
+  {
+    name: "Starter",
+    icon: Shield,
+    price: "$397",
+    period: "/mo",
+    tagline: "Plug the biggest leaks first.",
+    description: "Perfect for local businesses losing jobs to missed calls and a thin online presence. Capture the revenue you're already earning with the right systems.",
+    includes: [
+      "Local business number that routes calls to your phone",
+      "Missed-call text back so every unanswered call gets a reply",
+      "Conversion-focused website or landing page, built for your trade",
+      "Google Review engine – automated SMS requests after each job",
+      "Simple lead inbox — every call, text and form in one place",
+      "Monthly call & SMS usage up to fair-use limit (extra billed separately)",
+    ],
+    bestFor: "Local businesses ready to stop missing leads and start capturing every enquiry.",
+    highlight: false,
+  },
+  {
+    name: "Growth",
+    icon: Zap,
+    price: "$697",
+    period: "/mo",
+    tagline: "Capture every lead. Follow up automatically.",
+    description: "Everything in Starter, plus automated follow-up flows, reactivation campaigns, and managed Google Business Profile — so you stay top of mind and top of search.",
+    includes: [
+      "Everything in Starter",
+      "Advanced follow-up flows – automated SMS + email after quotes and missed calls",
+      "Reactivation campaigns to bring back old leads in your phone or inbox",
+      "Google Business Profile managed monthly (posts, photos, optimization)",
+      "Simple performance report each month (calls, leads, reviews, top channels)",
+      "Higher call & SMS usage limit included (extra billed separately)",
+    ],
+    bestFor: "Growing local businesses that want to capture every lead and follow up automatically.",
+    highlight: true,
+  },
+  {
+    name: "Done-For-You",
+    icon: Sparkles,
+    price: "$1,297",
+    period: "/mo",
+    tagline: "We run the follow-up. You run the jobs.",
+    description: "Everything in Growth, plus an AI Receptionist, priority lead handling, deeper automation for larger tickets, and a quarterly strategy session to keep everything tuned.",
+    includes: [
+      "Everything in Growth",
+      "AI Receptionist – answers overflow & after-hours calls, captures details and books callbacks",
+      "Priority handling of new leads – alerts and summaries sent to you and your team",
+      "Deeper follow-up automation for larger tickets and multi-step estimates",
+      "Quarterly strategy session to tune offers, pages and follow-up sequences",
+      "Highest included call, SMS & AI usage limit (overage at transparent rates)",
+    ],
+    bestFor: "Established local businesses that want a full done-for-you growth system.",
+    highlight: false,
+  },
+];
+
 function InvestmentPage() {
   return (
     <SiteLayout>
@@ -153,6 +210,102 @@ function InvestmentPage() {
               </div>
             );
           })}
+        </div>
+
+      </section>
+
+      {/* Second Pricing Section */}
+      <section className="border-t border-border/60 bg-surface/30">
+        <div className="mx-auto max-w-7xl px-5 py-20 md:px-8">
+          <div className="mb-12 text-center">
+            <p className="text-xs uppercase tracking-widest text-primary">Also Available</p>
+            <h2 className="mt-3 text-3xl md:text-4xl">
+              Flexible plans for <span className="text-gradient-ember">every stage.</span>
+            </h2>
+            <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
+              Straightforward monthly plans with no surprises. Pick the tier that matches where your business is right now.
+            </p>
+          </div>
+
+          <div className="grid gap-6 lg:grid-cols-3">
+            {plansV2.map((p) => {
+              const PlanIcon = p.icon;
+              return (
+                <div
+                  key={p.name + "-v2"}
+                  className={`relative flex flex-col rounded-3xl border p-8 ${
+                    p.highlight
+                      ? "border-primary bg-primary/5 shadow-lg shadow-primary/10"
+                      : "border-border bg-surface"
+                  }`}
+                >
+                  {p.highlight && (
+                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-primary px-4 py-1 text-xs font-medium text-primary-foreground">
+                      Most Popular
+                    </div>
+                  )}
+                  <div className="flex items-center gap-3">
+                    <div className="grid h-10 w-10 place-items-center rounded-xl bg-primary/12 text-primary">
+                      <PlanIcon className="h-5 w-5" />
+                    </div>
+                    <h3 className="text-xl font-semibold">{p.name}</h3>
+                  </div>
+                  <div className="mt-6">
+                    <span className="font-display text-5xl">{p.price}</span>
+                    <span className="text-lg text-muted-foreground">{p.period}</span>
+                  </div>
+                  <p className="mt-2 text-sm font-medium text-primary">{p.tagline}</p>
+                  <p className="mt-4 text-sm text-muted-foreground">{p.description}</p>
+
+                  <ul className="mt-6 flex-1 space-y-3">
+                    {p.includes.map((item) => (
+                      <li key={item} className="flex items-start gap-2 text-sm">
+                        <Check className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div className="mt-8 rounded-xl border border-border/60 bg-background/50 p-4">
+                    <p className="text-xs uppercase tracking-widest text-muted-foreground">Best for</p>
+                    <p className="mt-1 text-sm">{p.bestFor}</p>
+                  </div>
+
+                  <a
+                    href="https://calendly.com/arwebcrafts/30-mint"
+                    target="_blank"
+                    rel="noreferrer"
+                    className={`mt-6 inline-flex h-12 items-center justify-center gap-2 rounded-full px-6 text-sm font-medium transition-transform hover:-translate-y-0.5 ${
+                      p.highlight
+                        ? "bg-primary text-primary-foreground"
+                        : "border border-border bg-background text-foreground hover:bg-surface"
+                    }`}
+                  >
+                    <Calendar className="h-4 w-4" /> Book a call
+                  </a>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Footnote + Global Markets */}
+          <div className="mt-10 flex flex-col items-center gap-3 text-center">
+            <p className="text-sm text-muted-foreground">
+              <span className="font-semibold text-foreground">Setup fee excluded.</span>{" "}
+              We work globally with local businesses across the USA.
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-2">
+              <span className="text-xs uppercase tracking-widest text-muted-foreground">Serving</span>
+              {["🇺🇸 USA", "🇬🇧 UK", "🇨🇦 Canada", "🇦🇺 Australia"].map((country) => (
+                <span
+                  key={country}
+                  className="rounded-full border border-border bg-surface px-3 py-1 text-xs font-medium"
+                >
+                  {country}
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
