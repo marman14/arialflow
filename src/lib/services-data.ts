@@ -6,7 +6,7 @@ export type Service = {
   title: string;
   short: string;
   hero: string;
-  /** A longer, plain-language explanation of *why* this matters to a local business owner. */
+  /** A longer, plain-language explanation of *why* this matters to a business owner. */
   longDescription: string;
   /** Simple benefits a business owner can relate to. */
   benefits: string[];

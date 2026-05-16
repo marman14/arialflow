@@ -5,8 +5,8 @@ import { ArrowRight, Check, Sparkles, Shield, Zap, Calendar } from "lucide-react
 export const Route = createFileRoute("/investment")({
   head: () => ({
     meta: [
-      { title: "Investment — Arialflow Growth Plans for Local Businesses" },
-      { name: "description", content: "Growth plans for local businesses globally. Book a call to find the right fit." },
+      { title: "Investment — Arialflow Growth Plans for Businesses" },
+      { name: "description", content: "Growth plans for businesses globally. Book a call to find the right fit." },
       { property: "og:title", content: "Arialflow Investment" },
       { property: "og:description", content: "Growth plans built for the trades." },
     ],
@@ -78,16 +78,16 @@ const plansV2 = [
     price: "$397",
     period: "/mo",
     tagline: "Plug the biggest leaks first.",
-    description: "Perfect for local businesses losing jobs to missed calls and a thin online presence. Capture the revenue you're already earning with the right systems.",
+    description: "Perfect for businesses losing jobs to missed calls and a thin online presence. Capture the revenue you're already earning with the right systems.",
     includes: [
-      "Local business number that routes calls to your phone",
+      "Business number that routes calls to your phone",
       "Missed-call text back so every unanswered call gets a reply",
       "Conversion-focused website or landing page, built for your trade",
       "Google Review engine – automated SMS requests after each job",
       "Simple lead inbox — every call, text and form in one place",
       "Monthly call & SMS usage up to fair-use limit (extra billed separately)",
     ],
-    bestFor: "Local businesses ready to stop missing leads and start capturing every enquiry.",
+    bestFor: "Businesses ready to stop missing leads and start capturing every enquiry.",
     highlight: false,
   },
   {
@@ -105,7 +105,7 @@ const plansV2 = [
       "Simple performance report each month (calls, leads, reviews, top channels)",
       "Higher call & SMS usage limit included (extra billed separately)",
     ],
-    bestFor: "Growing local businesses that want to capture every lead and follow up automatically.",
+    bestFor: "Growing businesses that want to capture every lead and follow up automatically.",
     highlight: true,
   },
   {
@@ -123,7 +123,7 @@ const plansV2 = [
       "Quarterly strategy session to tune offers, pages and follow-up sequences",
       "Highest included call, SMS & AI usage limit (overage at transparent rates)",
     ],
-    bestFor: "Established local businesses that want a full done-for-you growth system.",
+    bestFor: "Established businesses that want a full done-for-you growth system.",
     highlight: false,
   },
 ];
@@ -292,7 +292,7 @@ function InvestmentPage() {
           <div className="mt-10 flex flex-col items-center gap-3 text-center">
             <p className="text-sm text-muted-foreground">
               <span className="font-semibold text-foreground">Setup fee excluded.</span>{" "}
-              We work globally with local businesses across the USA.
+              We work with businesses globally.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-2">
               <span className="text-xs uppercase tracking-widest text-muted-foreground">Serving</span>

@@ -18,7 +18,7 @@ export const LOCATIONS: LocationData[] = [
     slug: "dallas-tx",
     city: "Dallas",
     state: "TX",
-    hero: "Dallas' Premier AI Growth Partner for Local Businesses",
+    hero: "Dallas' Premier AI Growth Partner for Businesses",
     description: "We help HVAC, roofing, and plumbing businesses in the DFW metroplex stop missing calls and start booking more jobs on autopilot.",
     stats: {
       businessesHelped: "45+",

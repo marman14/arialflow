@@ -6,7 +6,7 @@ export const Route = createFileRoute("/case-studies")({
   head: () => ({
     meta: [
       { title: "Case Studies — Arialflow Results for Real businesses" },
-      { name: "description", content: "See how local businesses globally are using Arialflow to book more jobs, get more reviews, and grow revenue." },
+      { name: "description", content: "See how businesses globally are using Arialflow to book more jobs, get more reviews, and grow revenue." },
       { property: "og:title", content: "Arialflow Case Studies" },
       { property: "og:description", content: "Real results from Real businesses." },
     ],

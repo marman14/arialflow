@@ -12,8 +12,8 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Arialflow — More calls. More jobs. More revenue, on autopilot." },
-      { name: "description", content: "AI growth systems for local businesses globally. Capture every call, follow up every lead, win 5-star reviews — without leaving the job site." },
-      { property: "og:title", content: "Arialflow — AI Growth for Local Businesses" },
+      { name: "description", content: "AI growth systems for businesses globally. Capture every call, follow up every lead, win 5-star reviews — without leaving the job site." },
+      { property: "og:title", content: "Arialflow — AI Growth for Businesses" },
       { property: "og:description", content: "Capture every call, follow up every lead, win 5-star reviews — without leaving the job site." },
     ],
   }),
@@ -254,7 +254,7 @@ function HomePage() {
             <p className="text-xs uppercase tracking-widest text-primary">Why Arialflow</p>
             <h2 className="mt-3 text-4xl md:text-5xl">A partner — not a login.</h2>
             <p className="mt-5 text-muted-foreground">
-              Buying AI software is easy. Making it actually drive booked jobs for a local business is hard. We deploy, tune, and optimize the system for your trade — and stick around to make sure it works.
+              Buying AI software is easy. Making it actually drive booked jobs for a business is hard. We deploy, tune, and optimize the system for your trade — and stick around to make sure it works.
             </p>
           </div>
           <ul className="grid gap-4">

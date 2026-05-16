@@ -13,7 +13,7 @@ export function Footer() {
             <span className="font-display text-lg font-semibold text-espresso-foreground">Arialflow</span>
           </div>
           <p className="mt-4 max-w-sm text-sm text-muted-foreground">
-            AI-powered growth systems for local businesses globally. We help you capture every lead, get more reviews, and book more jobs — without the manual work.
+            AI-powered growth systems for businesses globally. We help you capture every lead, get more reviews, and book more jobs — without the manual work.
           </p>
           <div className="mt-5 space-y-1.5 text-sm text-espresso-foreground">
             <div className="flex items-center gap-2">
